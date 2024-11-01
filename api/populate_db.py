@@ -152,3 +152,6 @@ for entry in json_data:
         print(f"Inserted {product.name} into the database.")
     else:
         print(f"{product.name} already exists in the database.")
+
+
+

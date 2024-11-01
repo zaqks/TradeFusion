@@ -22,7 +22,8 @@
 
 .nav_panel #logo {
   width: 100%;
-  aspect-ratio: 5;
+  aspect-ratio: 3;
+
 }
 
 .nav_panel a {
@@ -111,6 +112,7 @@
   0% {
     width: 0%;
   }
+
   100% {
     width: 100%;
   }

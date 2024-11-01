@@ -1,0 +1,134 @@
+{% extends 'widgets/app_base/app_base_client.html' %}
+
+{% block page_title %}Item page{% endblock %}
+
+{% block page_body %}
+
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'widgets/card/card.css' %}">
+<link rel="stylesheet" href="{% static 'stock_app/stock.css' %}">
+
+
+<div class="section">
+    <div class="section_content" id="item_section">
+        <div class="row" id="item_sections">
+            <div class="section" id="itm_imgs">
+                <div class="section_content">
+                    <link rel="stylesheet" href="{% static 'widgets/box_3d/box_3d.css' %}">
+
+
+                    <div class="section hide">
+                        <div class="section_content carousel y" id="imgs_carousel">
+                            {% if itm.model_3d.image_3d.all|length %}
+                            <div class="box_3d" id="preview_box">
+                                <div id="angles">                                
+                                    {% for img in itm.model_3d.image_3d.all %}
+                                    <img src="{{img}}" alt="">
+                                    {% endfor %}                                
+                                </div>
+                                
+                                <canvas>                                    
+                                </canvas>
+                                
+                                
+                                <div class="loading_img">
+                                    <div class="anim">
+                                        <img src="{% static 'assets/icons/load-icon-png-7952.png' %}" alt="">
+                                    </div>
+                                    <h3>3D</h3>
+                                </div>
+                                
+                            </div>
+                            <script src="{% static 'widgets/box_3d/mode360.js' %}"></script>
+                            <script>new Mode360('preview_box')</script>
+                            {% endif %}
+
+                            {% for img in itm.images.all %}
+                            <div class="box_3d">
+                                <img class="prev_img" src="{{img}}" alt="">
+                            </div>
+                            {% endfor %}
+                        </div>
+
+
+                        <!--
+                        <script src="{% static 'widgets/section/carousel.js' %}"></script>
+                        <script>createAutoSlider('imgs_carousel', 30, true)</script>
+                        -->
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="section borders" id="details_section">
+                <div class="section_title">
+                    <div id="item_name">
+                        <h1>{{itm.name}}</h1>
+                        <p>{{itm.categ}}</p>
+                    </div>
+                </div>
+                <div class="section_content">
+                    <h1 id="item_price">{{currency}}{{itm.price|floatformat:0}}</h1>
+
+
+                    <form method="post">
+                        {% csrf_token %}
+
+                        <div class="section">
+
+                            <div class="section_content grid2">
+                                {{ frm1.management_form }}
+
+                                {% for frm in frm1 %}
+                                {% for field in frm %}
+                                {% include 'widgets/form/form.html' %}
+                                {% endfor %}
+                                {% endfor %}
+
+                            </div>
+                        </div>
+
+                        <div class="row" id="btn_row">
+                            {% for field in frm2 %}
+                            {% include 'widgets/form/form.html' %}
+                            {% endfor %}
+
+                            <button type="submit">Add to cart</button>
+                        </div>
+
+                    </form>
+
+                    {% if itm.desc %}
+                    <div class="section">
+                        <div class="section_title">
+                            <h3>Product details</h3>
+                        </div>
+                        <div class="section_content">
+                            <p>{{itm.desc}}</p>
+                        </div>
+                    </div>
+                    {% endif %}
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% if smlrs|length %}
+<div class="section">
+    <div class="section_title">
+        <h2>Similar Stocks</h2>
+    </div>
+    <div class="section_content grid3">
+        {% for itm in smlrs %}
+        {% include 'widgets/item_card/item_card_v_client.html' %}
+        {% endfor %}
+    </div>
+</div>
+{% endif %}
+
+
+{% endblock %}

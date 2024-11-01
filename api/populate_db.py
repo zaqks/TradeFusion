@@ -171,12 +171,21 @@ django.setup()
 from stocks_app.models import Stock
 
 json_data = [
+    "https://media.giphy.com/media/3oEduHtocgPvR0cG8E/giphy.gif?cid=790b76115tx45vay8rv5qsfsh6trbpz7cpa561iux4x1olob&ep=v1_gifs_search&rid=giphy.gif&ct=g",
+    "https://media.giphy.com/media/3oEduHtocgPvR0cG8E/giphy.gif?cid=790b76115tx45vay8rv5qsfsh6trbpz7cpa561iux4x1olob&ep=v1_gifs_search&rid=giphy.gif&ct=g",
+    "https://media.giphy.com/media/3oEduHtocgPvR0cG8E/giphy.gif?cid=790b76115tx45vay8rv5qsfsh6trbpz7cpa561iux4x1olob&ep=v1_gifs_search&rid=giphy.gif&ct=g",
+    "https://media.giphy.com/media/3oEduHtocgPvR0cG8E/giphy.gif?cid=790b76115tx45vay8rv5qsfsh6trbpz7cpa561iux4x1olob&ep=v1_gifs_search&rid=giphy.gif&ct=g",
+    "https://media.giphy.com/media/3oEduHtocgPvR0cG8E/giphy.gif?cid=790b76115tx45vay8rv5qsfsh6trbpz7cpa561iux4x1olob&ep=v1_gifs_search&rid=giphy.gif&ct=g",
+    "https://media.giphy.com/media/3oEduHtocgPvR0cG8E/giphy.gif?cid=790b76115tx45vay8rv5qsfsh6trbpz7cpa561iux4x1olob&ep=v1_gifs_search&rid=giphy.gif&ct=g",
+    "https://media.giphy.com/media/3oEduHtocgPvR0cG8E/giphy.gif?cid=790b76115tx45vay8rv5qsfsh6trbpz7cpa561iux4x1olob&ep=v1_gifs_search&rid=giphy.gif&ct=g",
+    "https://media.giphy.com/media/3oEduHtocgPvR0cG8E/giphy.gif?cid=790b76115tx45vay8rv5qsfsh6trbpz7cpa561iux4x1olob&ep=v1_gifs_search&rid=giphy.gif&ct=g",
+    "https://media.giphy.com/media/3oEduHtocgPvR0cG8E/giphy.gif?cid=790b76115tx45vay8rv5qsfsh6trbpz7cpa561iux4x1olob&ep=v1_gifs_search&rid=giphy.gif&ct=g",
+    "https://media.giphy.com/media/3oEduHtocgPvR0cG8E/giphy.gif?cid=790b76115tx45vay8rv5qsfsh6trbpz7cpa561iux4x1olob&ep=v1_gifs_search&rid=giphy.gif&ct=g",
     
-    # Add all other image URLs from your list
 ]
 
 # Assuming you have a Stock entry for each image and they are in order
 for idx, img_url in enumerate(json_data):
     stock_item = Stock.objects.get(id=idx + 1)  # Adjust depending on your indexing
-    stock_item.img = img_url
+    stock_item.img = img_url    
     stock_item.save()

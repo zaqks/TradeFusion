@@ -23,5 +23,7 @@ urlpatterns = [
     #
     path("auth/", include("auth_app.urls"), 
     ),
-    path("stocks/", include("stocks_app.urls"))
+    path("stocks/", include("stocks_app.urls")),
+    path("", include("public_app.urls"))
+
 ]

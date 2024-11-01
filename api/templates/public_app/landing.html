@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TradeFusion - Your Trusted Logistics Partner</title>
-    <link rel="stylesheet" href="style.css">
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'public_app/landing.css' %}">
 </head>
 
 <body>
@@ -27,8 +29,8 @@
                 <a href="#contact">Contact</a>
             </div>
                 <div class="login-signup">
-                    <button>Log In</button>
-                    <button>Sign Up</button>
+                    <button onclick='document.location.href=`{% url "auth_app:sign_in" %}`'' >Sign In</button>
+                    <button onclick='document.location.href=`{% url "auth_app:sign_up" %}`'' >Sign Up</button>                    
                 </div>
             </div>
         </nav>

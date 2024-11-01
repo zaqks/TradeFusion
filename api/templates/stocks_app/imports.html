@@ -13,7 +13,7 @@
 <link rel="stylesheet" href="{% static 'widgets/table/table.css' %}">
 <link rel="stylesheet" href="{% static 'stocks_app/tbl.css' %}">
 
-<div class="section">
+<div class="section overflow">
     <div class="section_title">
         <h1>Imports</h1>
     </div>
@@ -22,19 +22,27 @@
             <table class="import-table">
                 <thead>
                     <tr>
+                        <th>Transaction ID</th>
                         <th>Stock</th>
                         <th>Source Country</th>
                         <th>Status</th>
+                        <th>Current Position</th>
                         <th>Date of Import</th>
                     </tr>
                 </thead>
                 <tbody>
+                    {% for stk in stks %}
                     <tr>
-                        <td>Crude Oil</td>
-                        <td>Saudi Arabia</td>
-                        <td class="status-success">Delivered</td>
+
+                        <td>XXXX-XXXX-XXXX</td>
+                        <td>{{stk.name}}</td>
+                        <td>{{stk.country_of_origin}}</td>
+                        <td class="status-pending">Pending</td>
+                        <td>Somewhere In The Sea</td>
                         <td>2024-11-01</td>
+
                     </tr>
+                    {% endfor %}
                 </tbody>
             </table>
         </table>

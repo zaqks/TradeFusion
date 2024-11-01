@@ -9,7 +9,7 @@
   </title>
 
   {% load static %}
-  {% load i18n %}
+  
 
   <link rel="shortcut icon" href="{% static 'assets/images/logos/logo1.png' %}" type="image/x-icon" />
 
@@ -34,7 +34,7 @@
       <div class="section_content" id="welcome_content">
         <img src="{% static 'assets/images/logos/logo1.png' %}" alt="" id="logo">
         <div>
-          <h2>{% trans 'Welcome to' %}</h2>
+          <h2>Welcome to</h2>
           <h1>MAJESTY</h1>
         </div>
       </div>
@@ -61,7 +61,7 @@
           {% include 'widgets/form/form.html' %}
           {% endfor %}
 
-          <a id="guest_mode" href="{% url 'client_app:home' %}">{% trans 'guest mode' %} ></a>
+        
 
           <button type="submit">{% block btn%}{% endblock %}</button>
         </form>

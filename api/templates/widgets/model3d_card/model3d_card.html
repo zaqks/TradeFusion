@@ -1,0 +1,35 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'widgets/model3d_card/model3d_card.css' %}">
+<link rel="stylesheet" href="{% static 'widgets/box_3d/box_3d.css' %}">
+
+{% load i18n %}
+
+<div class='section borders model3d_card'>
+    <div class="section_title preview box_3d" id="{{mdl}}">
+        <div id="angles">
+            {% for img in mdl.image_3d.all %}
+            <img src="{{img}}" alt="">
+            {% endfor %}        
+        </div>
+        <canvas></canvas>
+        <div class="loading_img">
+            <div class="anim">
+                <img src="{% static 'assets/icons/load-icon-png-7952.png' %}" alt="">
+            </div>
+            <h3>3D</h3>
+        </div>
+    </div>
+    <div class="section_content">
+        <div class="row">
+            <h3>{{mdl.name}}</h3>
+            <a href="{% url 'owner_app:models3d_delete' pk=mdl.pk %}"
+                onclick="return confirm('Delete this model?')">{%trans 'Delete' %}</a>
+        </div>
+
+    </div>
+
+
+    
+    <script>new Mode360("{{mdl}}")</script>
+
+</div>

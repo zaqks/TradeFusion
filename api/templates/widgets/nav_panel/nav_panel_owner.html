@@ -1,0 +1,54 @@
+{% extends 'widgets/nav_panel/nav_panel.html' %}
+
+{% block cards %}
+
+{% load static %}
+{% load i18n %}
+
+<div class="nav_card">
+  <img src="{% static 'assets/icons/external-stats-ui-anggara-basic-outline-anggara-putra.png' %}" />
+  <!--alt="home"-->
+  <a href="{% url 'owner_app:home' %}">{% trans 'Stats' %}</a>
+</div>
+<div class="nav_card">
+  <img src="{% static 'assets/icons/home.png' %}" />
+  <!--alt="calendar--v1"-->
+  <a href="{% url 'owner_app:shop' %}">{% trans 'Shop' %}</a>
+</div>
+<div class="nav_card">
+  <img src="{% static 'assets/icons/settings.png'%}" />
+  <!--alt="settings"-->
+  <a href="{% url 'owner_app:vars' %}">{% trans 'Vars' %}</a>
+</div>
+<div class="nav_card">
+  <img src="{% static 'assets/icons/object.png'%}" />
+  <!--alt="settings"-->
+  <a href="{% url 'owner_app:models3d' %}">{% trans '3D' %}</a>
+</div>
+<div class="nav_card">
+  <img src="{% static 'assets/icons/purchase-order.png'%}" />
+  <!--alt="person-male--v3"-->
+  <a href="{% url 'owner_app:orders' %}">{% trans 'Orders' %} ({{order_count}})</a>
+</div>
+<div class="nav_card">
+  <img src="{% static 'assets/icons/time-machine--v1.png'%}" />
+  <!--alt="person-male--v3"-->
+  <a href="{% url 'owner_app:history' %}">{% trans 'History' %}</a>
+</div>
+<div class="nav_card">
+  <img src="{% static 'assets/icons/help.png'%}" />
+  <!--alt="person-male--v3"-->
+  <a href="{% url 'owner_app:tutorial' %}">{% trans 'Help' %}</a>
+</div>
+
+<!---
+<div class="nav_card">
+  <a>{{rem}} {% trans 'used' %}</a>
+</div>
+-->
+
+<script>
+  new NavPanel(["/", "/shop", "/vars", "models3d", "/orders", "/history", "/tutorial"]).set_select()
+</script>
+
+{% endblock %}

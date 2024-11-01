@@ -1,25 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Product Card</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <div class="product-card">
-    <img src="https://placehold.co/350x200" alt="Product Image" class="product-image">
-    <div class="product-details">
-      <h2 class="product-name" id="productName">Crude Oil</h2>
-      <p class="product-category" id="productCategory">Category: Energy</p>
-      <p class="product-country" id="productCountry">Country of Origin: Saudi Arabia</p>
-      <p class="product-quantity" id="productQuantity">Available Stock: 5,000,000 barrels</p>
-      <p class="product-price" id="productPrice">Price: $75.50 per barrel</p>
-      <p class="product-total-value" id="productTotalValue">Total Value: $377,500,000</p>
-      <p class="product-description" id="productDescription">Unrefined petroleum oil used for fuel and energy production.</p>
-      <p class="product-exported-to" id="productExportedTo">Exported To: United States, China, India</p>
-    </div>
-  </div>
+<div class="stock_card">
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'widgets/stock_card/stock_card.css' %}">
 
-</body>
-</html>
+  <img src="https://placehold.co/350x200" alt="Product Image" class="product-image">
+  <div class="product-details">
+    <h2 class="product-name" id="productName">Crude Oil</h2>
+    <p class="product-category" id="productCategory">Category: Energy</p>
+    <p class="product-country" id="productCountry">Country of Origin: Saudi Arabia</p>
+    <p class="product-quantity" id="productQuantity">Available Stock: 5,000,000 barrels</p>
+    <p class="product-price" id="productPrice">Price: $75.50 per barrel</p>
+    <p class="product-total-value" id="productTotalValue">Total Value: $377,500,000</p>
+    <p class="product-description" id="productDescription">Unrefined petroleum oil used for fuel and energy production.
+    </p>
+    <p class="product-exported-to" id="productExportedTo">Exported To: United States, China, India</p>
+  </div>
+</div>

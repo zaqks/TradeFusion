@@ -18,7 +18,7 @@
     </div>
     <div class="section_content grid3">
         {% for stk in stks %}
-        <p>{{stk}}</p>
+        {% include 'widgets/stock_card/stock_card.html' %}
         {% endfor %}
     </div>
 </div>

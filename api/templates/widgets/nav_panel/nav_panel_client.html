@@ -1,0 +1,37 @@
+{% extends 'widgets/nav_panel/nav_panel.html' %}
+
+{% block cards %}
+
+{% load static %}
+{% load i18n %}
+
+<div class="nav_card">
+  <img src="{% static 'assets/icons/home.png' %}" />
+  <!--alt="home"-->
+  <a href="{% url 'client_app:home' %}">{% trans 'Home' %}</a>
+</div>
+<div class="nav_card">
+  <img src="{% static 'assets/icons/shopping-cart.png'%}" />
+  <!--alt="calendar--v1"-->
+  <a href="{% url 'client_app:cart' %}">{% trans 'Cart' %} ({{cart_count}})</a>
+</div>
+<div class="nav_card">
+  <img src="{% static 'assets/icons/purchase-order.png'%}" />
+  <!--alt="person-male--v3"-->
+  <a href="{% url 'client_app:orders' %}">{% trans 'Orders' %}</a>
+</div>
+
+<!--
+<div class="nav_card">
+  <img
+    src="https://img.icons8.com/ios-filled/48/767676/settings.png"
+    alt="settings"
+  />
+  <a href="">Settings</a>
+</div>
+-->
+<script>
+  new NavPanel(["/", "/cart", "/orders"]).set_select()
+</script>
+
+{% endblock %}

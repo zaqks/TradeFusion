@@ -1,0 +1,117 @@
+* {
+  font-family: "Zona Pro";
+
+  padding: 0;
+  box-sizing: border-box;
+
+  margin: 0;
+  text-decoration: none;
+  border: none;
+
+  color: var(--txt0);
+}
+
+/* Hide scrollbars for WebKit-based browsers (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+/* Hide scrollbars for Firefox */
+* {
+  scrollbar-width: none;
+}
+
+/* Hide scrollbars for Internet Explorer and Edge */
+* {
+  -ms-overflow-style: none;
+}
+
+/* Ensure smooth scrolling on touch devices */
+* {
+  -webkit-overflow-scrolling: touch;
+}
+
+:root {
+  /*+id +darkness*/
+
+  /*--bg0: #1e1e1e;
+  --bg1: #171717;*/
+
+  --bg0: #0f0f0f;
+  --bg1: #0a0a0a;
+
+  --accent0: #ffcf40;
+  --accent1: #ffbf00;
+
+  /*
+  --accent0: #7f00ff;
+  --accent1: #6009c0;
+  */
+
+  --txt0: #ffffff;
+  --txt1: #767676;
+
+  --white: #ffffff;
+  --black: #0a0a0a;
+
+  --err: #e57373;
+  --cnf: #90ee90;
+  /**/
+
+  --sz0: 0px;
+  --sz1: 5px;
+  --sz2: 10px;
+  --sz3: 15px;
+  --sz4: 20px;
+  --sz5: 25px;
+  --sz6: 30px;
+  --sz7: 35px;
+  --sz8: 40px;
+  --sz9: 45px;
+  --sz10: 50px;
+  --sz11: 55px;
+  --sz12: 60px;
+  --sz13: 65px;
+  --sz14: 70px;
+  --sz15: 75px;
+  --sz16: 80px;
+  --sz17: 85px;
+  --sz18: 90px;
+  --sz19: 95px;
+}
+
+/*@media only screen and (max-width: 1000px) {}*/
+
+@media only screen and (max-width: 1100px) {
+  :root {
+    --sz0: 0px;
+    --sz1: 4px;
+    --sz2: 8px;
+    --sz3: 12px;
+    --sz4: 16px;
+    --sz5: 20px;
+    --sz6: 24px;
+    --sz7: 28px;
+    --sz8: 32px;
+    --sz9: 36px;
+    --sz10: 40px;
+    --sz11: 44px;
+    --sz12: 48px;
+    --sz13: 52px;
+    --sz14: 56px;
+    --sz15: 60px;
+    --sz16: 64px;
+    --sz17: 68px;
+    --sz18: 72px;
+    --sz19: 76px;
+  }
+}

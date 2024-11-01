@@ -1,0 +1,77 @@
+body {
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+
+  background-color: var(--bg0);
+
+  animation: var(--fade_anim);
+}
+
+#left {
+  width: 20%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+#right {
+  width: 80%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+.floating_icon#more_icn {
+  display: none;
+}
+
+@media only screen and (max-width: 1000px) {
+  #left {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 0;
+    z-index: 3;
+  }
+
+  #left.show {
+    width: 60%;
+  }
+
+  #right {
+    width: 100%;
+
+    padding-top: calc(var(--sz14));    
+  }
+
+  .floating_icon#more_icn {
+    display: flex;
+  }
+}
+
+@keyframes fade {
+  0% {
+    filter: blur(10px);
+  }
+  100% {
+    filter: blur(0px);
+  }
+}
+
+:root {
+  /*name duration timing-function delay iteration-count direction fill-mode;*/
+  --fade_anim: fade 0.25s linear 0s 1 normal;
+}

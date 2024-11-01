@@ -1,0 +1,84 @@
+.box_3d {
+  width: 100%;
+  aspect-ratio: 1;
+
+  background-color: var(--bg1);
+  border-radius: var(--sz3);
+
+  overflow: hidden;
+
+  display: block;
+  position: relative;
+}
+
+/*
+.box_3d img {
+  width: 100%;
+  aspect-ratio: 1;
+
+  object-fit: contain;
+
+  pointer-events: none;
+  user-select: none;
+
+  filter: contrast(1.1) brightness(1.1);
+}
+*/
+
+.box_3d canvas {
+  pointer-events: none;
+}
+
+.box_3d .loading_img {
+  width: 100%;
+  aspect-ratio: 1;
+
+  background-color: var(--bg1);
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  row-gap: var(--sz3);
+}
+
+.box_3d .loading_img h3 {
+  color: var(--txt0);  
+}
+
+.box_3d .loading_img .anim {
+  width: var(--sz11);    
+  aspect-ratio: 1;
+
+  border-radius: 50%;
+
+  animation: spin 3s linear 0s infinite normal;  
+}
+
+.box_3d .loading_img .anim img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+  
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(180deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

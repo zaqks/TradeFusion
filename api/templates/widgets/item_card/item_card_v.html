@@ -1,0 +1,26 @@
+{% load static %}
+{% load i18n %}
+
+<link rel="stylesheet" href="{% static 'widgets/item_card/item_card_v.css' %}">
+
+<div class='section item_card borders'>
+    {% block shop_url %}
+    {% endblock %}
+
+    <div class="section_title">
+        <img src="{{itm.images.first}}">
+    </div>
+
+    <div class="section_content">
+
+        <h3>{{itm.name}}</h3>
+        <h4>{{itm.categ}}</h4>
+
+        <div class="row">
+            <h4>({{itm.qnt}} {% trans 'left' %})</h4>
+            <h2>{{currency}}{{itm.price|floatformat:0}}</h2>
+        </div>
+
+        <!--{{itm.images.all}}-->
+    </div>
+</div>

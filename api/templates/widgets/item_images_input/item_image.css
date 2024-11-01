@@ -1,0 +1,22 @@
+#images_section .section {  
+  aspect-ratio: 1;
+
+  padding: 0;
+  overflow: hidden;
+}
+
+#images_section .section .section_content {
+  width: 100%;
+  height: 100%;
+
+  flex: none;
+}
+
+#images_section .section .section_content img {
+  width: 100%;
+  height: 100%;
+
+  border-radius: var(--sz2);
+
+  object-fit: cover;
+}

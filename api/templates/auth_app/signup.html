@@ -1,9 +1,9 @@
 {% extends 'auth_app/auth_base.html' %}
 
-{% load i18n %}
 
-{% block title%} {% trans 'SignUp' %} {% endblock%}
-{% block btn%} {% trans 'SignUp' %} {% endblock%}
+
+{% block title%} SignUp {% endblock%}
+{% block btn%} SignUp {% endblock%}
 {% block redirect %}
-<a href="{% url 'user_app:sign_in' %}">{% trans "I have an account" %}</a>
+<a href="{% url 'auth_app:sign_in' %}">I have an account</a>
 {% endblock %}

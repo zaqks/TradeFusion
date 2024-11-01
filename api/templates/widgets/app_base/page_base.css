@@ -1,0 +1,18 @@
+.page_base {
+  width: 100%;    
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 4vw;
+
+}
+
+
+
+#page_title{
+  font-size: var(--sz3);
+  
+  margin-top: 4vh;
+  margin-bottom: 4vh;
+}

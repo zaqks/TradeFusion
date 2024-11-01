@@ -1,0 +1,63 @@
+form {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+}
+
+form .section {
+  width: 100%;
+}
+
+form .input_section {
+  margin: 1vh 0;
+}
+
+form .input_tag {
+  font-size: var(--sz4);
+
+  font-weight: 600;
+
+  margin-bottom: var(--sz1);
+}
+
+form input,
+textarea,
+select {
+  font-size: var(--sz4);
+
+  padding: var(--sz3);
+  border-radius: var(--sz3);
+
+  background-color: transparent;
+  border: 1px solid var(--txt1);
+
+  outline: none;
+
+  width: 100%;
+}
+form select {
+  background-color: var(--bg0);
+  appearance: none;
+}
+
+form textarea {
+  resize: none;
+}
+
+form input[type="number"] {
+  appearance: textfield;
+}
+
+form .input_error {
+  color: var(--err);
+
+  font-size: var(--sz3);
+  margin-top: 1vw;
+
+  text-align: start;
+}
+
+ 

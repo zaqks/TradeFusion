@@ -1,0 +1,5 @@
+{% extends 'widgets/item_card/item_card_v.html' %}
+
+{% block shop_url %}
+<a href="{% url 'client_app:item' pk=itm.pk %}"></a>
+{% endblock %}

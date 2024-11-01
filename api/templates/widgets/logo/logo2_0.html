@@ -1,0 +1,8 @@
+{% load static %}
+
+
+<link rel="stylesheet" href="{% static 'widgets/logo/logo.css' %}">
+
+<div class="logo logo20" onclick="document.location.href=`{% url 'client_app:home' %}`" id="theme_toggle">
+  <img src="{% static 'assets/images/logos/svg/logo2.svg' %}" alt="" />
+</div>

@@ -1,0 +1,63 @@
+{% extends 'widgets/app_base/app_base_client.html' %}
+
+{% block page_title %}
+{% endblock %}
+
+
+
+
+{% block page_body %}
+
+{% load static %}
+<link rel="stylesheet" href="{% static 'widgets/section/section.css' %}">
+
+
+<link rel="stylesheet" href="{% static 'stocks_app/stocks.css' %}">
+
+<div class="section" id="header">
+    <div class="section_content">
+        <img src="{% static 'assets/images/bgs/header.png' %}" alt="">
+        <h1>Logistics
+            Made Easier For You</h1>
+    </div>
+</div>
+
+
+
+<div class="section" style="position: relative; top: calc(-1 * 25vh);">
+    <div class="section_title">
+        <h1>Trending Stocks</h1>
+    </div>
+    <div class="section_content grid3">
+        {% for itm in stks %}
+        {% include 'widgets/item_card/item_card_v_client.html' %}
+        {% endfor %}
+    </div>
+</div>
+
+<div class="section" style="position: relative; top: calc(-1 * 20vh);">
+    <div class="section_title">
+        <h1>New Stocks</h1>
+    </div>
+    <div class="section_content grid3">
+        {% for itm in stks %}
+        {% include 'widgets/item_card/item_card_v_client.html' %}
+        {% endfor %}
+    </div>
+</div>
+
+<div class="section" style="position: relative; top: calc(-1 * 20vh);">
+    <div class="section_title">
+        <h1>Explore Stocks</h1>
+    </div>
+    <div class="section_content grid3">
+        {% for itm in stks %}
+        {% include 'widgets/item_card/item_card_v_client.html' %}
+        {% endfor %}
+    </div>
+</div>
+
+
+
+
+{% endblock %}

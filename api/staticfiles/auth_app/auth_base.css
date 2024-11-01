@@ -1,0 +1,105 @@
+#left {
+  width: 60%;
+  padding: 1.5vw;
+
+  position: relative;
+
+  background-color: var(--accent1);
+}
+
+#left #bg {
+  position: absolute;
+  z-index: -1;
+
+  width: calc(100% - 3vw);
+  height: calc(100% - 3vw);
+
+  border-radius: 1.5vw;
+
+  background-color: var(--accent1);
+  object-fit: cover;
+
+  /*filter: blur(2px);*/
+}
+
+#left .section {
+  height: 100%;
+}
+
+#welcome_content {
+  justify-content: space-between;
+  padding: 3vw;
+
+  height: 100%;
+}
+
+#welcome_content #logo {
+  width: 45%;
+  aspect-ratio: 1;
+
+  margin: auto;
+  
+}
+
+#welcome_content h2 {
+  font-size: 3em;
+  color: var(--white);
+}
+#welcome_content h1 {
+  font-size: 4.5em;
+  color: var(--white);
+}
+
+/***/
+
+#right {
+  width: 40%;
+  padding: 5vw;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+
+#form_wrapper {
+  margin: auto 0;
+}
+
+#form_wrapper h1 {
+  font-size: var(--sz10);
+  margin-bottom: 6vh;
+}
+
+#form_wrapper .section_content {
+  align-items: center;
+}
+
+form button {
+  width: 100%;
+  margin-top: 15vh;
+
+  font-size: var(--sz5);
+  font-weight: 600;
+}
+
+a {
+  color: var(--accent0);
+  margin-top: 2vh;
+
+  font-size: var(--sz4);
+}
+
+a#guest_mode {
+  margin-left: auto;  
+}
+
+@media only screen and (max-width: 1000px) {
+  #left {
+    display: none;
+  }
+
+  #right {
+    width: 80%;
+    margin: auto;
+  }
+}

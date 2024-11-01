@@ -1,0 +1,24 @@
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'widgets/item_card/item_card_v.css' %}">
+
+<div class='section item_card borders'>
+    {% block shop_url %}
+    {% endblock %}
+
+    <div class="section_title">
+        <img src="{{itm.img}}">
+    </div>
+
+    <div class="section_content">
+
+        <h3>{{itm.name}}</h3>
+        <h4>{{itm.category}}</h4>
+
+        <div class="row">            
+            <h2>{{itm.total_value|floatformat:0}} {{currency}}</h2>
+        </div>
+
+        <!--{{itm.images.all}}-->
+    </div>
+</div>

@@ -1,0 +1,108 @@
+{% extends 'widgets/app_base/app_base_client.html' %}
+
+{% block page_title %}Item page{% endblock %}
+
+{% block page_body %}
+
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'widgets/card/card.css' %}">
+<link rel="stylesheet" href="{% static 'stocks_app/stock.css' %}">
+
+
+<div class="section">
+    <div class="section_content" id="item_section">
+        <div class="row" id="item_sections">
+            <div class="section" id="itm_imgs">
+                <div class="section_content">
+                    <link rel="stylesheet" href="{% static 'widgets/box_3d/box_3d.css' %}">
+
+
+                    <div class="section hide">
+                        <div class="section_content carousel y" id="imgs_carousel">                            
+                            <div class="box_3d">
+                                <img class="prev_img" src="{{itm.img}}" alt="">
+                            </div>                            
+                        </div>
+
+                        <!--
+                        <script src="{% static 'widgets/section/carousel.js' %}"></script>
+                        <script>createAutoSlider('imgs_carousel', 30, true)</script>
+                        -->
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="section borders" id="details_section">
+                <div class="section_title">
+                    <div id="item_name">
+                        <h1>{{itm.name}}</h1>
+                        <p>{{itm.category}}</p>
+                    </div>
+                </div>
+                <div class="section_content">
+                    <h1 id="item_price">{{itm.total_value|floatformat:0}} {{currency}}</h1>
+                    
+                    <h2 id="item_price"><br>{{itm.quantity}} {{itm.unit}}</h2>
+
+                    <form method="post">
+                        {% csrf_token %}
+
+                        <div class="section">
+
+                            <div class="section_content grid2">
+                                {{ frm1.management_form }}
+
+                                {% for frm in frm1 %}
+                                {% for field in frm %}
+                                {% include 'widgets/form/form.html' %}
+                                {% endfor %}
+                                {% endfor %}
+
+                            </div>
+                        </div>
+
+                        <div class="row" id="btn_row">
+                            {% for field in frm2 %}
+                            {% include 'widgets/form/form.html' %}
+                            {% endfor %}
+                            
+                            <button type="button" onclick="document.location.href=`{% url 'stocks_app:imports' %}`">Import</button>
+                        </div>
+
+                    </form>
+
+                    {% if itm.description %}
+                    <div class="section">
+                        <div class="section_title">
+                            <h3>Product details</h3>
+                        </div>
+                        <div class="section_content">
+                            <p>{{itm.description}}</p>
+                        </div>
+                    </div>
+                    {% endif %}
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% if smlrs|length %}
+<div class="section">
+    <div class="section_title">
+        <h2>Similar Stocks</h2>
+    </div>
+    <div class="section_content grid3">
+        {% for itm in smlrs %}
+        {% include 'widgets/item_card/item_card_v_client.html' %}
+        {% endfor %}
+    </div>
+</div>
+{% endif %}
+
+
+{% endblock %}

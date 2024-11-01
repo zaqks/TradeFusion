@@ -1,0 +1,32 @@
+{% load static %}
+
+
+<link rel="stylesheet" href="{% static 'widgets/nav_panel/nav_panel.css' %}" />
+<div class="nav_panel hide" id="main_nav_panel">
+  <div id="logo">{% include 'widgets/logo/logo2_0.html' %}</div>
+
+  <script src="{% static 'widgets/nav_panel/nav_panel.js' %}"></script>
+
+  <div id="nav_cards">
+    {% block cards%}
+    {% endblock %}
+
+  </div>
+
+
+
+
+
+  <div id="btns">
+    {% if logged %}
+    <a href="{% url 'auth_app:sign_in' %}">Sign Out</a>
+    {% else %}
+
+    <a href="{% url 'auth_app:sign_in' %}">Sign In</a>
+    <a href="{% url 'auth_app:sign_up' %}">Sign Up</a>
+
+
+    {% endif %}
+  </div>
+  <!--<a href="https://icons8.com">Icons By Icons8</a>-->
+</div>

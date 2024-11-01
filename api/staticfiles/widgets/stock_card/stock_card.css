@@ -1,0 +1,109 @@
+.stock_card {
+  width: 100%;
+  /* Increased width for better layout */
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  /* Softer shadow for depth */
+  overflow: hidden;
+  background: #ffffff;
+  /* White background for the card */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: var(--sz2);
+  position: relative;
+  /* For positioning */
+  text-align: center;
+  /* Center text for a cleaner look */
+}
+
+.stock_card:hover {
+  transform: translateY(-8px);
+  /* Slight lift effect */
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+  /* Increased shadow on hover */
+}
+
+.stock-image {
+  width: 100%;
+  height: 200px;
+  /* Fixed height for uniformity */
+  object-fit: cover;
+  /* Crop the image to fit the box */
+  border-radius: 10px;
+  margin-bottom: 15px;
+  /* Space below image */
+}
+
+.stock-details {
+  padding: 15px;
+}
+
+.stock-name {
+  font-size: var(--sz6);
+  /* Larger size for stock name */
+  margin-bottom: 10px;
+  color: #333;
+  /* Dark color for contrast */
+  font-weight: bold;
+  /* Bold for emphasis */
+}
+
+.stock-category,
+.stock-country,
+.stock-quantity,
+.stock-price,
+.stock-total-value {
+  color: #555;
+  /* Softer color for secondary text */
+  margin: 5px 0;
+  /* Uniform margin for all */
+  font-size: 0.95em;
+  /* Slightly smaller for better hierarchy */
+}
+
+.stock-price {
+  font-size: 1.6em;
+  /* Increased size for price */
+  font-weight: bold;
+  color: #27ae60;
+  /* Green color for price */
+}
+
+.stock-total-value {
+  font-size: 1.1em;
+  /* Distinct size for total value */
+  font-weight: bold;
+  color: #2980b9;
+  /* Blue color for total value */
+}
+
+.stock-description {
+  margin-top: 15px;
+  font-size: 0.9em;
+  /* Slightly larger than previous */
+  color: #666;
+  line-height: 1.4;
+  /* Better line spacing */
+}
+
+.stock-exported-to {
+  margin-top: 10px;
+  font-size: 0.9em;
+  color: #888;
+  font-style: italic;
+  /* Italic for subtle emphasis */
+}
+
+/* Add a footer style if needed */
+.stock-footer {
+  text-align: right;
+  margin-top: 15px;
+}
+
+.stock-footer a {
+  color: #2980b9;
+  /* Color for footer links */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+ 

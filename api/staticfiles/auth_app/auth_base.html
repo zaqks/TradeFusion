@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>
+    TradeFusion
+  </title>
+
+  {% load static %}
+
+
+  <link rel="shortcut icon" href="{% static 'assets/images/logos/logo1.png' %}" type="image/x-icon" />
+
+  <link rel="stylesheet" href="{% static 'assets/fonts/zonaPro/zonaPro.css' %}" />
+  <link rel="stylesheet" href="{% static 'widgets/theme_light.css' %}" />
+
+  <link rel="stylesheet" href="{% static 'widgets/section/section.css' %}" />
+  <link rel="stylesheet" href="{% static 'widgets/button/button.css' %}" />
+  <link rel="stylesheet" href="{% static 'widgets/form/form.css' %}" />
+
+
+  <link rel="stylesheet" href="{% static 'widgets/app_base/app_base.css' %}" />
+
+  <link rel="stylesheet" href="{% static 'auth_app/auth_base.css' %}" />
+</head>
+
+<body>
+  <div id="left">
+    <!--<img src="{% static 'assets/images/bgs/auth.png' %}" alt="" id="bg">-->
+
+
+    <div class="section">
+      <div class="section_content" id="welcome_content">
+        <img src="{% static 'assets/images/logos/logo1.png' %}" alt="" id="logo">
+        <div>
+          <h2>Welcome to</h2>
+          <h1>TradeFusion</h1>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+
+  <div id="right">
+
+    <div class="section" id="form_wrapper">
+      <div class="section_title">
+        <h1>
+          {% block title %}{% endblock %}
+        </h1>
+
+
+      </div>
+      <div class="section_content">
+        <form method="post" action="{% url 'stocks_app:stocks' %}">
+          {% csrf_token %}
+
+          {% block frm %}
+          {% endblock %}
+
+
+
+          <button type="text" onclick="document.location.href=`{% url 'stocks_app:stocks' %}`">{% block btn%}{% endblock%}</button>
+
+        </form>
+
+        {% block redirect %}{% endblock %}
+
+      </div>
+    </div>
+
+
+
+
+
+  </div>
+</body>
+
+</html>

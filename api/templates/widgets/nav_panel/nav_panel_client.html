@@ -3,22 +3,22 @@
 {% block cards %}
 
 {% load static %}
-{% load i18n %}
+
 
 <div class="nav_card">
   <img src="{% static 'assets/icons/home.png' %}" />
   <!--alt="home"-->
-  <a href="{% url 'client_app:home' %}">{% trans 'Home' %}</a>
+  <a href="{% url 'stocks_app:stocks' %}">Home</a>
 </div>
 <div class="nav_card">
   <img src="{% static 'assets/icons/shopping-cart.png'%}" />
   <!--alt="calendar--v1"-->
-  <a href="{% url 'client_app:cart' %}">{% trans 'Cart' %} ({{cart_count}})</a>
+  <a href="">Cart</a>
 </div>
 <div class="nav_card">
   <img src="{% static 'assets/icons/purchase-order.png'%}" />
   <!--alt="person-male--v3"-->
-  <a href="{% url 'client_app:orders' %}">{% trans 'Orders' %}</a>
+  <a href="">Orders</a>
 </div>
 
 <!--

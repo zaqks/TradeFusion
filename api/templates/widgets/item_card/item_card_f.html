@@ -13,7 +13,7 @@
     <div class="section_content">
         <a href="{% url 'client_app:item' pk=itm.pk %}"></a>
 
-        <h2>{{currency}}{{itm.price|floatformat:0}}</h2>
+        <h2>{{itm.price|floatformat:0}} {{currency}}</h2>
 
         <h1>{{itm.name}}</h1>
 

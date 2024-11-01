@@ -2,14 +2,20 @@
 
 - [X] sign in
 
-- [ ] sign up
-- [ ] account validation
+
 
 - [X] see all exports 
-- [ ] product page to import
+- [X] product page to import
 
-- [ ] see my exports 
-- [ ] add my export
-- [ ] validate my export
+- [X] see my exports 
 
-- [ ] see my imports 
+
+- [X] see my imports 
+- [X] add my export
+
+- [X] sign up
+- [X] account validation
+
+
+- [ ] fix imgs
+- [ ] a better stocks page

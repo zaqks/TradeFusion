@@ -19,11 +19,11 @@
 
   <div id="btns">
     {% if logged %}
-    <a href="">Sign Out</a>
+    <a href="{% url 'auth_app:sign_in' %}">Sign Out</a>
     {% else %}
 
-    <a href="">Sign In</a>
-    <a href="">Sign Up</a>
+    <a href="{% url 'auth_app:sign_in' %}">Sign In</a>
+    <a href="{% url 'auth_app:sign_up' %}">Sign Up</a>
 
 
     {% endif %}

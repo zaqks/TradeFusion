@@ -12,12 +12,20 @@ def stocks(request):
 
 
 def imports(request):
-    return render(request, "stocks_app/imports.html", {"stks":None})
+    stks = Stock.objects.all()
+
+    return render(request, "stocks_app/imports.html", {"stks":stks})
 
 
 
 def exports(request):
-    return render(request, "stocks_app/exports.html", {"stks":None})
+    stks = Stock.objects.all()
+
+    return render(request, "stocks_app/exports.html", {"stks":stks})
+
+
+def export_add(request):
+    return render(request, "stocks_app/export_add.html", {})
 
 
 def stock(request, pk):

@@ -51,9 +51,16 @@ header nav {
 }
 
 header .logo {
-  font-size: 2rem;
-  font-weight: bold;
-  color: #ffffff;
+  width: 15%;
+  aspect-ratio: 3;
+}
+
+header .logo img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  filter: invert(1);
 }
 
 
@@ -139,17 +146,21 @@ main {
   gap: 20px;
 }
 
-.service, .faq-item {
+.service,
+.faq-item {
   padding: 15px;
   background: #fff;
   border-radius: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
 }
-.section_title{
+
+.section_title {
   text-align: center;
 }
-.service:hover, .faq-item:hover {
+
+.service:hover,
+.faq-item:hover {
   transform: translateY(-5px);
 }
 
@@ -159,11 +170,13 @@ h2 {
   color: #333;
   margin-bottom: 5%;
 }
+
 h3 {
   font-size: 1.5rem;
   color: #333;
   margin-bottom: 5%;
 }
+
 p {
   font-size: 1.2rem;
   color: #555;
@@ -200,10 +213,12 @@ li {
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
-  .services-container, .faq-container {
+
+  .services-container,
+  .faq-container {
     grid-template-columns: 1fr;
   }
-  
+
   header .company-info h1 {
     font-size: 3rem;
   }
@@ -221,6 +236,7 @@ li {
     margin-left: 0.25rem;
   }
 }
+
 /* Reset */
 * {
   margin: 0;
@@ -269,28 +285,34 @@ header .logo {
 
 /* Hamburger Menu */
 .hamburger {
-  display: none; /* Hidden by default */
+  display: none;
+  /* Hidden by default */
   font-size: 2rem;
   background: transparent;
   border: none;
   color: #fff;
   cursor: pointer;
-  z-index: 20; /* Ensure it’s above other elements */
+  z-index: 20;
+  /* Ensure it’s above other elements */
 }
-#browse{
+
+#browse {
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 20px;
   padding: 10px;
   margin-right: 20;
 
 }
+
 /* Navigation Links */
 #nav-links {
-  display: flex; /* Default flex layout */
-  width: 75%;
+  display: flex;
+  /* Default flex layout */
+  width: 70%;
   align-items: center;
   justify-content: space-between;
-  gap: 1rem; /* Space between links */
+  gap: 1rem;
+  /* Space between links */
 }
 
 /* Navigation Links Styling */
@@ -308,8 +330,10 @@ header nav a:hover {
 
 /* Login and Signup Buttons */
 header .login-signup {
-  display: flex; /* Flex row for buttons */
-  gap: 0.5rem; /* Space between buttons */
+  display: flex;
+  /* Flex row for buttons */
+  gap: 0.5rem;
+  /* Space between buttons */
 }
 
 header .login-signup button {
@@ -358,26 +382,37 @@ main {
 @media (max-width: 768px) {
   #nav-links {
     /* Increased z-index for visibility */
-    display: none; /* Hide navigation links by default */
-    flex-direction: column; /* Stack links vertically */
-    align-items: center; /* Align items to the start */
-    width:40%;
-    position: absolute; /* Position absolute */
-    top: 25%; /* Position below the nav */
+    display: none;
+    /* Hide navigation links by default */
+    flex-direction: column;
+    /* Stack links vertically */
+    align-items: center;
+    /* Align items to the start */
+    width: 40%;
+    position: absolute;
+    /* Position absolute */
+    top: 25%;
+    /* Position below the nav */
     right: 5%;
-    background-color: rgba(255, 255, 255, 0.9); /* Reduced opacity */
-    padding: 0.5rem 0; /* Smaller padding for the menu */
+    background-color: rgba(255, 255, 255, 0.9);
+    /* Reduced opacity */
+    padding: 0.5rem 0;
+    /* Smaller padding for the menu */
     border-radius: 5px;
     z-index: 10;
   }
-  #browse{
+
+  #browse {
     background-color: transparent;
     width: 100%;
     gap: 0.5rem;
     display: flex;
-    flex-direction: column; /* Stack links vertically */
-    padding: 0.5rem 0; /* Smaller padding for the menu */
+    flex-direction: column;
+    /* Stack links vertically */
+    padding: 0.5rem 0;
+    /* Smaller padding for the menu */
   }
+
   .login-signup {
     width: 100%;
     display: flex;
@@ -385,7 +420,8 @@ main {
     align-items: center;
 
   }
-  .login-signup  {
+
+  .login-signup {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -394,21 +430,26 @@ main {
   }
 
   #nav-links.show {
-    display: flex; /* Show the nav links when toggled */
+    display: flex;
+    /* Show the nav links when toggled */
   }
 
   header nav {
-    justify-content: space-between; /* Align items to the start */
+    justify-content: space-between;
+    /* Align items to the start */
   }
 
   header .login-signup {
-    flex-direction: column; /* Stack buttons vertically */
-    width: 100%; /* Ensure it takes full width */
-    margin-top: 0.5rem; /* Adjust spacing for buttons */
+    flex-direction: column;
+    /* Stack buttons vertically */
+    width: 100%;
+    /* Ensure it takes full width */
+    margin-top: 0.5rem;
+    /* Adjust spacing for buttons */
   }
 
   header .login-signup button {
-    width: 50%; 
+    width: 50%;
   }
 
   .hamburger {
@@ -425,11 +466,15 @@ main {
   }
 
   header nav a {
-    margin: 0; /* Remove margin for mobile */
-    font-size: 1.2rem; /* Adjust font size */
-    color: #000; /* Change text color to black */
+    margin: 0;
+    /* Remove margin for mobile */
+    font-size: 1.2rem;
+    /* Adjust font size */
+    color: #000;
+    /* Change text color to black */
   }
 }
+
 html {
   scroll-behavior: smooth;
 }

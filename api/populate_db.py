@@ -171,12 +171,21 @@ django.setup()
 from stocks_app.models import Stock
 
 json_data = [
-    "https://www.google.com/imgres?q=oil%20barrels&imgurl=https%3A%2F%2Fwww.europecaribbeanline.com%2Fassets%2Ffiles%2Fessential-guide-to-barrel-shipping-for-oil-riggers.webp&imgrefurl=https%3A%2F%2Fwww.europecaribbeanline.com%2Flogistics%2Fessential-guide-to-barrel-shipping-for-oil-riggers%2F&docid=CsmcQq6GT1N2XM&tbnid=5flBoHrzHjfBnM&vet=12ahUKEwi4q8WHoLqJAxUpfKQEHXHWJQ0QM3oECEwQAA..i&w=1254&h=836&hcb=2&ved=2ahUKEwi4q8WHoLqJAxUpfKQEHXHWJQ0QM3oECEwQAA",
+    "https://media.giphy.com/media/3o6Zt21KAh2J70WGZ2/giphy.gif?cid=790b7611grcj81fg2feiqysftgastpgo9f246glx11rfvchb&ep=v1_gifs_search&rid=giphy.gif&ct=g",
+    "https://media.giphy.com/media/3o6Zt21KAh2J70WGZ2/giphy.gif?cid=790b7611grcj81fg2feiqysftgastpgo9f246glx11rfvchb&ep=v1_gifs_search&rid=giphy.gif&ct=g",
+    "https://media.giphy.com/media/3o6Zt21KAh2J70WGZ2/giphy.gif?cid=790b7611grcj81fg2feiqysftgastpgo9f246glx11rfvchb&ep=v1_gifs_search&rid=giphy.gif&ct=g",
+    "https://media.giphy.com/media/3o6Zt21KAh2J70WGZ2/giphy.gif?cid=790b7611grcj81fg2feiqysftgastpgo9f246glx11rfvchb&ep=v1_gifs_search&rid=giphy.gif&ct=g",
+    "https://media.giphy.com/media/3o6Zt21KAh2J70WGZ2/giphy.gif?cid=790b7611grcj81fg2feiqysftgastpgo9f246glx11rfvchb&ep=v1_gifs_search&rid=giphy.gif&ct=g",
+    "https://media.giphy.com/media/3o6Zt21KAh2J70WGZ2/giphy.gif?cid=790b7611grcj81fg2feiqysftgastpgo9f246glx11rfvchb&ep=v1_gifs_search&rid=giphy.gif&ct=g",
+    "https://media.giphy.com/media/3o6Zt21KAh2J70WGZ2/giphy.gif?cid=790b7611grcj81fg2feiqysftgastpgo9f246glx11rfvchb&ep=v1_gifs_search&rid=giphy.gif&ct=g",
+    "https://media.giphy.com/media/3o6Zt21KAh2J70WGZ2/giphy.gif?cid=790b7611grcj81fg2feiqysftgastpgo9f246glx11rfvchb&ep=v1_gifs_search&rid=giphy.gif&ct=g",
+    "https://media.giphy.com/media/3o6Zt21KAh2J70WGZ2/giphy.gif?cid=790b7611grcj81fg2feiqysftgastpgo9f246glx11rfvchb&ep=v1_gifs_search&rid=giphy.gif&ct=g",
+    "https://media.giphy.com/media/3o6Zt21KAh2J70WGZ2/giphy.gif?cid=790b7611grcj81fg2feiqysftgastpgo9f246glx11rfvchb&ep=v1_gifs_search&rid=giphy.gif&ct=g",
     # Add all other image URLs from your list
 ]
 
 # Assuming you have a Stock entry for each image and they are in order
 for idx, img_url in enumerate(json_data):
     stock_item = Stock.objects.get(id=idx + 1)  # Adjust depending on your indexing
-    stock_item.image_url = img_url
+    stock_item.img = img_url
     stock_item.save()

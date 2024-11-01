@@ -10,15 +10,42 @@
 
 {% load static %}
 <link rel="stylesheet" href="{% static 'widgets/section/section.css' %}">
+<link rel="stylesheet" href="{% static 'widgets/table/table.css' %}">
+<link rel="stylesheet" href="{% static 'stocks_app/tbl.css' %}">
 
-
-<div class="section">
+<div class="section overflow">
     <div class="section_title">
-        <h1>Exports</h1>
+        <h1>My Exports</h1>
         <button>Export +</button>
     </div>
-    <div class="section_content grid3">
+    <div class="section_content">
+        <table class="import-table">
+            <thead>
+                <tr>
+                    <th>Transaction ID</th>
+                    <th>Stock</th>
+                    <th>Destination Country</th>
+                    <th>Status</th>
+                    <th>Current Position</th>
+                    <th>Date of Export</th>
+                    <th>Date of Arrival</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for stk in stks %}
+                <tr>
 
+                    <td>XXXX-XXXX-XXXX</td>
+                    <td>{{stk.name}}</td>
+                    <td>{{stk.exported_to|first}}</td>
+                    <td class="status-pending">Pending</td>
+                    <td>Somewhere In The Sea</td>
+                    <td>2024-11-01</td>
+                    <td>NA</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
     </div>
 </div>
 

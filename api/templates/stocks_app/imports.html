@@ -15,37 +15,38 @@
 
 <div class="section overflow">
     <div class="section_title">
-        <h1>Imports</h1>
+        <h1>My Imports</h1>
     </div>
     <div class="section_content">
-        <table>
-            <table class="import-table">
-                <thead>
-                    <tr>
-                        <th>Transaction ID</th>
-                        <th>Stock</th>
-                        <th>Source Country</th>
-                        <th>Status</th>
-                        <th>Current Position</th>
-                        <th>Date of Import</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {% for stk in stks %}
-                    <tr>
 
-                        <td>XXXX-XXXX-XXXX</td>
-                        <td>{{stk.name}}</td>
-                        <td>{{stk.country_of_origin}}</td>
-                        <td class="status-pending">Pending</td>
-                        <td>Somewhere In The Sea</td>
-                        <td>2024-11-01</td>
+        <table class="import-table">
+            <thead>
+                <tr>
+                    <th>Transaction ID</th>
+                    <th>Stock</th>
+                    <th>Source Country</th>
+                    <th>Status</th>
+                    <th>Current Position</th>
+                    <th>Date of Import</th>
+                    <th>Date of Arrival</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for stk in stks %}
+                <tr>
 
-                    </tr>
-                    {% endfor %}
-                </tbody>
-            </table>
+                    <td>XXXX-XXXX-XXXX</td>
+                    <td>{{stk.name}}</td>
+                    <td>{{stk.country_of_origin}}</td>
+                    <td class="status-pending">Pending</td>
+                    <td>Somewhere In The Sea</td>
+                    <td>2024-11-01</td>
+                    <td>NA</td>
+                </tr>
+                {% endfor %}
+            </tbody>
         </table>
+
     </div>
 </div>
 

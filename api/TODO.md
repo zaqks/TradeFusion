@@ -18,3 +18,4 @@
 - [ ] add my export
 
 - [ ] fix imgs
+- [ ] a better stocks page

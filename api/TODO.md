@@ -11,11 +11,11 @@
 
 
 - [X] see my imports 
-
+- [X] add my export
 
 - [ ] sign up
 - [ ] account validation
-- [ ] add my export
+
 
 - [ ] fix imgs
 - [ ] a better stocks page

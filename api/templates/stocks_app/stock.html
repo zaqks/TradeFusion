@@ -19,12 +19,10 @@
 
 
                     <div class="section hide">
-                        <div class="section_content carousel y" id="imgs_carousel">
-                            {% for img in itm.images.all %}
+                        <div class="section_content carousel y" id="imgs_carousel">                            
                             <div class="box_3d">
-                                <img class="prev_img" src="{{img}}" alt="">
-                            </div>
-                            {% endfor %}
+                                <img class="prev_img" src="{{itm.img}}" alt="">
+                            </div>                            
                         </div>
 
                         <!--
@@ -44,8 +42,9 @@
                     </div>
                 </div>
                 <div class="section_content">
-                    <h1 id="item_price">{{currency}}{{itm.price|floatformat:0}}</h1>
-
+                    <h1 id="item_price">{{itm.total_value|floatformat:0}} {{currency}}</h1>
+                    
+                    <h2 id="item_price"><br>{{itm.quantity}} {{itm.unit}}</h2>
 
                     <form method="post">
                         {% csrf_token %}
@@ -74,13 +73,13 @@
 
                     </form>
 
-                    {% if itm.desc %}
+                    {% if itm.description %}
                     <div class="section">
                         <div class="section_title">
                             <h3>Product details</h3>
                         </div>
                         <div class="section_content">
-                            <p>{{itm.desc}}</p>
+                            <p>{{itm.description}}</p>
                         </div>
                     </div>
                     {% endif %}

@@ -13,8 +13,8 @@
 - [X] see my imports 
 - [X] add my export
 
-- [ ] sign up
-- [ ] account validation
+- [X] sign up
+- [X] account validation
 
 
 - [ ] fix imgs

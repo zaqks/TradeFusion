@@ -1,6 +1,6 @@
 # TODO
 
-- [ ] sign in
+- [X] sign in
 
 - [ ] sign up
 - [ ] account validation

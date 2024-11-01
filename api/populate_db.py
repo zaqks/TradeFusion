@@ -162,7 +162,13 @@ for entry in json_data:
 
 
 import json
-from your_app.models import Stock
+import os
+import django
+
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "_main_app.settings")
+django.setup()
+
+from stocks_app.models import Stock
 
 json_data = [
     "https://www.google.com/imgres?q=oil%20barrels&imgurl=https%3A%2F%2Fwww.europecaribbeanline.com%2Fassets%2Ffiles%2Fessential-guide-to-barrel-shipping-for-oil-riggers.webp&imgrefurl=https%3A%2F%2Fwww.europecaribbeanline.com%2Flogistics%2Fessential-guide-to-barrel-shipping-for-oil-riggers%2F&docid=CsmcQq6GT1N2XM&tbnid=5flBoHrzHjfBnM&vet=12ahUKEwi4q8WHoLqJAxUpfKQEHXHWJQ0QM3oECEwQAA..i&w=1254&h=836&hcb=2&ved=2ahUKEwi4q8WHoLqJAxUpfKQEHXHWJQ0QM3oECEwQAA",

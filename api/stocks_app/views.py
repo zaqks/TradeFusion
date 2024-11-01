@@ -5,4 +5,4 @@ from django.shortcuts import render
 
 
 def stocks(request):
-    return render(request, "stock_app/stocks.html", {})
+    return render(request, "stocks_app/stocks.html", {})

@@ -9,7 +9,7 @@
   </title>
 
   {% load static %}
-  
+
 
   <link rel="shortcut icon" href="{% static 'assets/images/logos/logo1.png' %}" type="image/x-icon" />
 
@@ -55,15 +55,16 @@
 
       </div>
       <div class="section_content">
-        <form method="post">
+        <form method="post" action="{% url 'stocks_app:stocks' %}">
           {% csrf_token %}
 
           {% block frm %}
           {% endblock %}
 
-        
 
-          <button type="submit">{% block btn%}{% endblock %}</button>
+
+          <button type="text" onclick="document.location.href=`{% url 'stocks_app:stocks' %}`">{% block btn%}{% endblock%}</button>
+
         </form>
 
         {% block redirect %}{% endblock %}

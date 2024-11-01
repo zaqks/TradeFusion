@@ -171,16 +171,7 @@ django.setup()
 from stocks_app.models import Stock
 
 json_data = [
-    "https://media.giphy.com/media/3o6Zt21KAh2J70WGZ2/giphy.gif?cid=790b7611grcj81fg2feiqysftgastpgo9f246glx11rfvchb&ep=v1_gifs_search&rid=giphy.gif&ct=g",
-    "https://media.giphy.com/media/3o6Zt21KAh2J70WGZ2/giphy.gif?cid=790b7611grcj81fg2feiqysftgastpgo9f246glx11rfvchb&ep=v1_gifs_search&rid=giphy.gif&ct=g",
-    "https://media.giphy.com/media/3o6Zt21KAh2J70WGZ2/giphy.gif?cid=790b7611grcj81fg2feiqysftgastpgo9f246glx11rfvchb&ep=v1_gifs_search&rid=giphy.gif&ct=g",
-    "https://media.giphy.com/media/3o6Zt21KAh2J70WGZ2/giphy.gif?cid=790b7611grcj81fg2feiqysftgastpgo9f246glx11rfvchb&ep=v1_gifs_search&rid=giphy.gif&ct=g",
-    "https://media.giphy.com/media/3o6Zt21KAh2J70WGZ2/giphy.gif?cid=790b7611grcj81fg2feiqysftgastpgo9f246glx11rfvchb&ep=v1_gifs_search&rid=giphy.gif&ct=g",
-    "https://media.giphy.com/media/3o6Zt21KAh2J70WGZ2/giphy.gif?cid=790b7611grcj81fg2feiqysftgastpgo9f246glx11rfvchb&ep=v1_gifs_search&rid=giphy.gif&ct=g",
-    "https://media.giphy.com/media/3o6Zt21KAh2J70WGZ2/giphy.gif?cid=790b7611grcj81fg2feiqysftgastpgo9f246glx11rfvchb&ep=v1_gifs_search&rid=giphy.gif&ct=g",
-    "https://media.giphy.com/media/3o6Zt21KAh2J70WGZ2/giphy.gif?cid=790b7611grcj81fg2feiqysftgastpgo9f246glx11rfvchb&ep=v1_gifs_search&rid=giphy.gif&ct=g",
-    "https://media.giphy.com/media/3o6Zt21KAh2J70WGZ2/giphy.gif?cid=790b7611grcj81fg2feiqysftgastpgo9f246glx11rfvchb&ep=v1_gifs_search&rid=giphy.gif&ct=g",
-    "https://media.giphy.com/media/3o6Zt21KAh2J70WGZ2/giphy.gif?cid=790b7611grcj81fg2feiqysftgastpgo9f246glx11rfvchb&ep=v1_gifs_search&rid=giphy.gif&ct=g",
+    
     # Add all other image URLs from your list
 ]
 

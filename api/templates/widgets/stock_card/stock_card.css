@@ -1,5 +1,5 @@
 .stock_card {
-  width: 350px;
+  width: 100%;
   /* Increased width for better layout */
   border-radius: 15px;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
@@ -8,7 +8,7 @@
   background: #ffffff;
   /* White background for the card */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  padding: 20px;
+  padding: var(--sz2);
   position: relative;
   /* For positioning */
   text-align: center;
@@ -38,7 +38,7 @@
 }
 
 .stock-name {
-  font-size: 1.8em;
+  font-size: var(--sz6);
   /* Larger size for stock name */
   margin-bottom: 10px;
   color: #333;

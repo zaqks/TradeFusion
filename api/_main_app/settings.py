@@ -65,6 +65,9 @@ TEMPLATES = [
                 "django.template.context_processors.request",
                 "django.contrib.auth.context_processors.auth",
                 "django.contrib.messages.context_processors.messages",
+                #
+                "stocks_app.context_processors.currency",
+
             ],
         },
     },
@@ -128,3 +131,4 @@ STATICFILES_DIRS = (f"{BASE_DIR}/templates",)
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
+CURRENCY = "USD"

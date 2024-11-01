@@ -14,11 +14,11 @@
     <div class="section_content">
 
         <h3>{{itm.name}}</h3>
-        <h4>{{itm.categ}}</h4>
+        <h4>{{itm.category}}</h4>
 
         <div class="row">
-            <h4>({{itm.qnt}} {% trans 'left' %})</h4>
-            <h2>{{currency}}{{itm.price|floatformat:0}}</h2>
+            <!--<h4>({{itm.quantity}} {% trans 'left' %})</h4>-->
+            <h2>{{currency}}{{itm.total_value|floatformat:0}}</h2>
         </div>
 
         <!--{{itm.images.all}}-->

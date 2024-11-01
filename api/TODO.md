@@ -16,6 +16,6 @@
 - [X] sign up
 - [X] account validation
 
-
+- [X] a better stocks page
+- [ ] logos
 - [ ] fix imgs
-- [ ] a better stocks page

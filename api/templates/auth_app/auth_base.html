@@ -57,9 +57,8 @@
         <form method="post">
           {% csrf_token %}
 
-          {% for field in frm %}
-          {% include 'widgets/form/form.html' %}
-          {% endfor %}
+          {% block frm %}
+          {% endblock %}
 
         
 

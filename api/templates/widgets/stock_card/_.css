@@ -1,0 +1,85 @@
+
+
+.export-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .export-table th,
+  .export-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 2px solid #ddd;
+  }
+  
+  .export-table th {
+    background-color: #3498db;
+    /* Blue background for the header */
+  color: white;
+  text-transform: uppercase;
+  /* Uppercase for header text */
+  }
+  
+  .export-table tr:hover {
+    background-color: #f1f1f1;
+    /* Light gray background on hover */
+  }
+  
+  .export-table td {
+    background-color: #f9f9f9;
+    /* Light background for table cells */
+  }
+  
+  .import-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .import-table th,
+  .import-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 2px solid #ddd;
+  }
+  
+  .import-table th {
+    background-color: #3498db;
+    /* Blue background for the header */
+    color: white;
+    text-transform: uppercase;
+    /* Uppercase for header text */
+  }
+  
+  .import-table tr:hover {
+    background-color: #f1f1f1;
+    /* Light gray background on hover */
+  }
+  
+  .import-table td {
+    background-color: #f9f9f9;
+    /* Light background for table cells */
+  }
+  
+  .status-success {
+    color: #27ae60;
+    /* Green for successful deliveries */
+    font-weight: bold;
+    /* Bold for emphasis */
+  }
+  
+  .status-pending {
+    color: #f39c12;
+    /* Orange for pending status */
+    font-weight: bold;
+    /* Bold for emphasis */
+  }
+  
+  .status-failed {
+    color: #e74c3c;
+    /* Red for failed deliveries */
+    font-weight: bold;
+    /* Bold for emphasis */
+  }
+  
+  

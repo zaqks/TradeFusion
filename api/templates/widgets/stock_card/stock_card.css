@@ -1,175 +1,109 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-  
-  body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    font-family: 'Arial', sans-serif;
-    background: linear-gradient(135deg, #f0f4f8, #e0e8f2); /* Soft gradient background */
-  }
-  
-  .product-card {
-    width: 350px; /* Increased width for better layout */
-    border-radius: 15px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1); /* Softer shadow for depth */
-    overflow: hidden;
-    background: #ffffff; /* White background for the card */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    padding: 20px;
-    position: relative; /* For positioning */
-    text-align: center; /* Center text for a cleaner look */
-  }
-  
-  .product-card:hover {
-    transform: translateY(-8px); /* Slight lift effect */
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2); /* Increased shadow on hover */
-  }
-  
-  .product-image {
-    width: 100%;
-    height: 200px; /* Fixed height for uniformity */
-    object-fit: cover; /* Crop the image to fit the box */
-    border-radius: 10px;
-    margin-bottom: 15px; /* Space below image */
-  }
-  
-  .product-details {
-    padding: 15px;
-  }
-  
-  .product-name {
-    font-size: 1.8em; /* Larger size for product name */
-    margin-bottom: 10px;
-    color: #333; /* Dark color for contrast */
-    font-weight: bold; /* Bold for emphasis */
-  }
-  
-  .product-category,
-  .product-country,
-  .product-quantity,
-  .product-price,
-  .product-total-value {
-    color: #555; /* Softer color for secondary text */
-    margin: 5px 0; /* Uniform margin for all */
-    font-size: 0.95em; /* Slightly smaller for better hierarchy */
-  }
-  
-  .product-price {
-    font-size: 1.6em; /* Increased size for price */
-    font-weight: bold;
-    color: #27ae60; /* Green color for price */
-  }
-  
-  .product-total-value {
-    font-size: 1.1em; /* Distinct size for total value */
-    font-weight: bold;
-    color: #2980b9; /* Blue color for total value */
-  }
-  
-  .product-description {
-    margin-top: 15px;
-    font-size: 0.9em; /* Slightly larger than previous */
-    color: #666;
-    line-height: 1.4; /* Better line spacing */
-  }
-  
-  .product-exported-to {
-    margin-top: 10px;
-    font-size: 0.9em;
-    color: #888;
-    font-style: italic; /* Italic for subtle emphasis */
-  }
-  
-  /* Add a footer style if needed */
-  .product-footer {
-    text-align: right;
-    margin-top: 15px;
-  }
-  
-  .product-footer a {
-    color: #2980b9; /* Color for footer links */
-    text-decoration: none;
-    font-weight: bold;
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 400px) {
-    .product-card {
-      width: 90%; /* Full width on small screens */
-    }
-  
-    .product-name {
-      font-size: 1.5em; /* Smaller size for mobile */
-    }
-  }
-.export-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
+.stock_card {
+  width: 350px;
+  /* Increased width for better layout */
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  /* Softer shadow for depth */
+  overflow: hidden;
+  background: #ffffff;
+  /* White background for the card */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 20px;
+  position: relative;
+  /* For positioning */
+  text-align: center;
+  /* Center text for a cleaner look */
 }
 
-.export-table th,
-.export-table td {
-    padding: 15px;
-    text-align: left;
-    border-bottom: 2px solid #ddd;
+.stock_card:hover {
+  transform: translateY(-8px);
+  /* Slight lift effect */
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+  /* Increased shadow on hover */
 }
 
-.export-table th {
-    background-color: #3498db; /* Blue background for the header */
-    color: white;
-    text-transform: uppercase; /* Uppercase for header text */
+.stock-image {
+  width: 100%;
+  height: 200px;
+  /* Fixed height for uniformity */
+  object-fit: cover;
+  /* Crop the image to fit the box */
+  border-radius: 10px;
+  margin-bottom: 15px;
+  /* Space below image */
 }
 
-.export-table tr:hover {
-    background-color: #f1f1f1; /* Light gray background on hover */
+.stock-details {
+  padding: 15px;
 }
 
-.export-table td {
-    background-color: #f9f9f9; /* Light background for table cells */
-}
-.import-table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-.import-table th,
-.import-table td {
-    padding: 15px;
-    text-align: left;
-    border-bottom: 2px solid #ddd;
+.stock-name {
+  font-size: 1.8em;
+  /* Larger size for stock name */
+  margin-bottom: 10px;
+  color: #333;
+  /* Dark color for contrast */
+  font-weight: bold;
+  /* Bold for emphasis */
 }
 
-.import-table th {
-    background-color: #3498db; /* Blue background for the header */
-    color: white;
-    text-transform: uppercase; /* Uppercase for header text */
+.stock-category,
+.stock-country,
+.stock-quantity,
+.stock-price,
+.stock-total-value {
+  color: #555;
+  /* Softer color for secondary text */
+  margin: 5px 0;
+  /* Uniform margin for all */
+  font-size: 0.95em;
+  /* Slightly smaller for better hierarchy */
 }
 
-.import-table tr:hover {
-    background-color: #f1f1f1; /* Light gray background on hover */
+.stock-price {
+  font-size: 1.6em;
+  /* Increased size for price */
+  font-weight: bold;
+  color: #27ae60;
+  /* Green color for price */
 }
 
-.import-table td {
-    background-color: #f9f9f9; /* Light background for table cells */
+.stock-total-value {
+  font-size: 1.1em;
+  /* Distinct size for total value */
+  font-weight: bold;
+  color: #2980b9;
+  /* Blue color for total value */
 }
 
-.status-success {
-    color: #27ae60; /* Green for successful deliveries */
-    font-weight: bold; /* Bold for emphasis */
+.stock-description {
+  margin-top: 15px;
+  font-size: 0.9em;
+  /* Slightly larger than previous */
+  color: #666;
+  line-height: 1.4;
+  /* Better line spacing */
 }
 
-.status-pending {
-    color: #f39c12; /* Orange for pending status */
-    font-weight: bold; /* Bold for emphasis */
+.stock-exported-to {
+  margin-top: 10px;
+  font-size: 0.9em;
+  color: #888;
+  font-style: italic;
+  /* Italic for subtle emphasis */
 }
 
-.status-failed {
-    color: #e74c3c; /* Red for failed deliveries */
-    font-weight: bold; /* Bold for emphasis */
+/* Add a footer style if needed */
+.stock-footer {
+  text-align: right;
+  margin-top: 15px;
 }
+
+.stock-footer a {
+  color: #2980b9;
+  /* Color for footer links */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+ 

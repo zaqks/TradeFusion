@@ -7,7 +7,7 @@
 {% load static %}
 
 <link rel="stylesheet" href="{% static 'widgets/card/card.css' %}">
-<link rel="stylesheet" href="{% static 'stock_app/stock.css' %}">
+<link rel="stylesheet" href="{% static 'stocks_app/stock.css' %}">
 
 
 <div class="section">
@@ -20,37 +20,12 @@
 
                     <div class="section hide">
                         <div class="section_content carousel y" id="imgs_carousel">
-                            {% if itm.model_3d.image_3d.all|length %}
-                            <div class="box_3d" id="preview_box">
-                                <div id="angles">                                
-                                    {% for img in itm.model_3d.image_3d.all %}
-                                    <img src="{{img}}" alt="">
-                                    {% endfor %}                                
-                                </div>
-                                
-                                <canvas>                                    
-                                </canvas>
-                                
-                                
-                                <div class="loading_img">
-                                    <div class="anim">
-                                        <img src="{% static 'assets/icons/load-icon-png-7952.png' %}" alt="">
-                                    </div>
-                                    <h3>3D</h3>
-                                </div>
-                                
-                            </div>
-                            <script src="{% static 'widgets/box_3d/mode360.js' %}"></script>
-                            <script>new Mode360('preview_box')</script>
-                            {% endif %}
-
                             {% for img in itm.images.all %}
                             <div class="box_3d">
                                 <img class="prev_img" src="{{img}}" alt="">
                             </div>
                             {% endfor %}
                         </div>
-
 
                         <!--
                         <script src="{% static 'widgets/section/carousel.js' %}"></script>
@@ -65,7 +40,7 @@
                 <div class="section_title">
                     <div id="item_name">
                         <h1>{{itm.name}}</h1>
-                        <p>{{itm.categ}}</p>
+                        <p>{{itm.category}}</p>
                     </div>
                 </div>
                 <div class="section_content">
@@ -94,7 +69,7 @@
                             {% include 'widgets/form/form.html' %}
                             {% endfor %}
 
-                            <button type="submit">Add to cart</button>
+                            <button type="submit">Import</button>
                         </div>
 
                     </form>

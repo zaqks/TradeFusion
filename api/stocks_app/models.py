@@ -10,7 +10,7 @@ class Stock(models.Model):
     unit_price = models.DecimalField(max_digits=10, decimal_places=2)
     total_value = models.DecimalField(max_digits=15, decimal_places=2)
     description = models.TextField()
-    image_url = models.URLField(max_length=500, blank=True, null=True)  # Add image URL field here
+    img = models.URLField(max_length=500, blank=True, null=True)  # Add image URL field here
 
     def __str__(self):
         return self.name

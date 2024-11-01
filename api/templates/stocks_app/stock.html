@@ -67,8 +67,8 @@
                             {% for field in frm2 %}
                             {% include 'widgets/form/form.html' %}
                             {% endfor %}
-
-                            <button type="submit">Import</button>
+                            
+                            <button type="button" onclick="document.location.href=`{% url 'stocks_app:imports' %}`">Import</button>
                         </div>
 
                     </form>

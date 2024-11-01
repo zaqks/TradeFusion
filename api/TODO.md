@@ -2,14 +2,19 @@
 
 - [X] sign in
 
-- [ ] sign up
-- [ ] account validation
+
 
 - [X] see all exports 
-- [ ] product page to import
+- [X] product page to import
 
-- [ ] see my exports 
+- [X] see my exports 
+
+
+- [X] see my imports 
+
+
+- [ ] sign up
+- [ ] account validation
 - [ ] add my export
-- [ ] validate my export
 
-- [ ] see my imports 
+- [ ] fix imgs

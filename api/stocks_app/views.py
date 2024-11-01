@@ -21,6 +21,9 @@ def exports(request):
 
 
 def stock(request, pk):
+    itm = Stock.objects.get(id=pk)
     stks = Stock.objects.all()
 
-    return render(request, "stocks_app/stock.html", {"smlrs":stks})
+    return render(request, "stocks_app/stock.html", {
+        "itm":itm,
+        "smlrs":stks})

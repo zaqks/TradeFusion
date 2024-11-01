@@ -5,7 +5,7 @@
 - [ ] sign up
 - [ ] account validation
 
-- [ ] see all exports 
+- [X] see all exports 
 - [ ] product page to import
 
 - [ ] see my exports 

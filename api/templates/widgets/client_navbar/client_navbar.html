@@ -11,17 +11,17 @@
     <div class="nav_card">
         <img src="{% static 'assets/icons/shopping-cart.png'%}" />
         <!--alt="calendar--v1"-->
-        <a href=""></a>
+        <a href="{% url 'stocks_app:imports' %}"></a>
     </div>
     <div class="nav_card">
         <img src="{% static 'assets/icons/purchase-order.png'%}" />
         <!--alt="person-male--v3"-->
-        <a href=""></a>
+        <a href="{% url 'stocks_app:exports' %}"></a>
     </div>
 
     <div id="bg"></div>
 </div>
 
 <script>
-    new NavPanel(["/", "/cart", "/orders"], "nav_bar_2").set_select()
+    new NavPanel(["/", "/imports", "/exports"], "nav_bar_2").set_select()
 </script>

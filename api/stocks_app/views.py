@@ -18,4 +18,9 @@ def imports(request):
 
 def exports(request):
     return render(request, "stocks_app/exports.html", {"stks":None})
-    
+
+
+def stock(request, pk):
+    stks = Stock.objects.all()
+
+    return render(request, "stocks_app/stock.html", {"smlrs":stks})

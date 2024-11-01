@@ -9,5 +9,21 @@
 {% block page_body %}
 
 {% load static %}
+<link rel="stylesheet" href="{% static 'widgets/section/section.css' %}">
+
+
+<div class="section">
+    <div class="section_title">
+        <h1>Stocks</h1>
+    </div>
+    <div class="section_content grid3">
+        {% for stk in stks %}
+        <p>{{stk}}</p>
+        {% endfor %}
+    </div>
+</div>
+
+
+
 
 {% endblock %}

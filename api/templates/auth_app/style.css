@@ -1,0 +1,177 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background-image: url("../assets/images/bgs/header.png");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Fixed background */
+  color: #fff;
+  height: 100vh;
+  position: relative;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  z-index: 1;
+}
+
+#overlay {
+  background-color: rgba(51, 51, 51, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+/* Navigation styling */
+header nav {
+  display: flex;
+  position: absolute;
+  top: 2rem;
+  left: 0;
+  right: 0;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  z-index: 2;
+}
+
+header .logo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+#nav-links {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 10px;
+}
+
+header nav a {
+  margin: 0 1rem;
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+header nav a:hover {
+  color: #ff8c00;
+}
+
+header .company-info {
+  z-index: 2;
+  text-align: center;
+  padding: 2rem 1rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+header .company-info h1 {
+  font-size: 4rem;
+  margin-bottom: 0.5rem;
+}
+
+header .company-info p {
+  font-size: 2.5rem;
+  color: #ffffff;
+}
+
+header .login-signup {
+  z-index: 2;
+  margin-top: 1rem;
+}
+
+header .login-signup button {
+  background-color: black;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+  font-size: larger;
+  margin-left: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+header .login-signup button:hover {
+  background-color: gray;
+}
+
+/* Main content styling */
+main {
+  padding: 40px 20px;
+  background-color: transparent;
+  position: relative;
+  z-index: 0;
+}
+
+/* Section styling */
+section {
+  padding: 40px;
+  margin: 20px 0;
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent for overlay effect */
+  border-radius: 8px;
+}
+
+/* Grid container for services */
+.services-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.service, .faq-item {
+  background-color: rgba(236, 240, 241, 0.8); /* Transparent sections */
+  border-radius: 5px;
+  padding: 15px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  margin: 20px 0;
+  font-size: 2.5rem;
+}
+
+p {
+  font-size: 1.2rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .services-container {
+    grid-template-columns: 1fr;
+  }
+  
+  header .company-info h1 {
+    font-size: 3rem;
+  }
+
+  header .company-info p {
+    font-size: 1.5rem;
+  }
+
+  header nav a {
+    margin: 0 0.5rem;
+  }
+
+  header .login-signup button {
+    font-size: medium;
+    margin-left: 0.25rem;
+  }
+}

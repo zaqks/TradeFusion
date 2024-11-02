@@ -1,480 +1,125 @@
-/* Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Arial, sans-serif;
-  color: #333;
-  background-color: #f4f4f4;
-}
-
-/* Header */
-header {
-  color: #fff;
-  height: 100vh;
-  position: relative;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  z-index: 1;
-}
-
-#overlay {
-  background-image: url("../assets/images/bgs/header.png");
-  background-size: cover;
-  background-position: center;
-  filter: blur(3px) brightness(0.7);
+/* background*/
+img#bg {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-}
+  top: -1vh;
+  left: -1%;
 
-/* Navigation styling */
-header nav {
-  display: flex;
-  position: absolute;
-  top: 2rem;
-  left: 0;
-  right: 0;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1rem 2rem;
-  z-index: 2;
-}
-
-header .logo {
-  width: 15%;
-  aspect-ratio: 3;
-}
-
-header .logo img {
-  width: 100%;
-  height: 100%;
+  width: 102%;
+  height: 102vh;
 
   object-fit: cover;
+
+  z-index: -1;
+
+  animation-name: blr;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+
+@keyframes blr {
+  50% {
+    filter: brightness(0.9) blur(1px);
+  }
+
+  100% {
+    filter: brightness(0.7) blur(2px);
+  }
+}
+
+/* navbar */
+#navbar {
+  position: fixed;
+
+  width: 90%;
+  padding: var(--sz2);
+
+  margin: 1% 5%;
+  border-radius: var(--sz3);
+
+
+  display: flex;
+  align-items: end;
+
+  gap: var(--sz1);
+
+  z-index: 3;
+}
+
+#navbar img#logo {
+  height: var(--sz15);
+  aspect-ratio: 3;
+
+  object-fit: contain;
+
   filter: invert(1);
 }
 
 
-header nav a {
-  margin: 0 1rem;
-  text-decoration: none;
-  color: #ffffff;
-  font-weight: 500;
-  font-size: 1.5rem;
-  transition: color 0.3s ease;
-}
-
-header nav a:hover {
-  color: #ff8c00;
-}
-
-header .company-info {
-  z-index: -1;
-  text-align: center;
-  padding: 2rem 1rem;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-header .company-info h1 {
-  font-size: 4rem;
-  margin-bottom: 0.5rem;
-}
-
-header .company-info p {
-  font-size: 2.5rem;
-  color: #ffffff;
-}
-
-header .login-signup {
-  z-index: 2;
-  margin-top: 1rem;
-}
-
-header .login-signup button {
-  background-color: black;
-  color: #fff;
-  border: none;
-  border-radius: 20px;
-  padding: 0.5rem 1rem;
-  font-size: larger;
-  margin-left: 0.5rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-header .login-signup button:hover {
-  background-color: gray;
-}
-
-/* Main content styling */
-main {
-  padding: 40px 20px;
-  background-color: transparent;
-  position: relative;
-  z-index: 0;
-}
-
-/* Bento Style Card */
-.bento-card {
-  background-color: rgba(255, 255, 255, 0.7);
-  border-radius: 15px;
-  padding: 30px;
-  margin: 4% 15%;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.bento-card:hover {
-  transform: scale(1.02);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-/* Services Grid */
-.services-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
-}
-
-.service,
-.faq-item {
-  padding: 15px;
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-}
-
-.section_title {
-  text-align: center;
-}
-
-.service:hover,
-.faq-item:hover {
-  transform: translateY(-5px);
-}
-
-/* Typography */
-h2 {
-  font-size: 2rem;
-  color: #333;
-  margin-bottom: 5%;
-}
-
-h3 {
-  font-size: 1.5rem;
-  color: #333;
-  margin-bottom: 5%;
-}
-
-p {
-  font-size: 1.2rem;
-  color: #555;
-}
-
-ul {
-  padding-left: 20px;
-}
-
-li {
-  margin-bottom: 10px;
-}
-
-/* FAQ Section */
-.faq-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-}
-
-.faq-item h3 {
-  font-size: 1.25rem;
-  margin-bottom: 10px;
-}
-
-/* Contact Section */
-#contact {
-  text-align: center;
-}
-
-#contact p {
-  margin: 10px 0;
-}
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-
-  .services-container,
-  .faq-container {
-    grid-template-columns: 1fr;
-  }
-
-  header .company-info h1 {
-    font-size: 3rem;
-  }
-
-  header .company-info p {
-    font-size: 1.5rem;
-  }
-
-  header nav a {
-    margin: 0 0.5rem;
-  }
-
-  header .login-signup button {
-    font-size: medium;
-    margin-left: 0.25rem;
-  }
-}
-
-/* Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Arial, sans-serif;
-  color: #333;
-  background-color: #f4f4f4;
-}
-
-/* Header */
-header {
-  color: #fff;
-  height: 100vh;
-  position: relative;
-  text-align: center;
+#navbar #links {
+  flex-grow: 1;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  overflow: hidden;
-  z-index: 1;
-}
-
-/* Navigation styling */
-header nav {
-  display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 1rem 2rem;
-  position: absolute;
-  top: 2rem;
-  left: 0;
-  right: 0;
-  z-index: 3;
+  gap: var(--sz5);
+
+  padding: var(--sz3);
 }
 
-header .logo {
-  font-size: 2rem;
-  font-weight: bold;
-  color: #ffffff;
+#navbar #links * {
+  font-size: var(--sz5);
+  font-weight: 600;
+  color: var(--white);
 }
 
-/* Hamburger Menu */
-.hamburger {
-  display: none;
-  /* Hidden by default */
-  font-size: 2rem;
-  background: transparent;
-  border: none;
-  color: #fff;
-  cursor: pointer;
-  z-index: 20;
-  /* Ensure it’s above other elements */
-}
-
-#browse {
-  background-color: rgba(255, 255, 255, 0.2);
-  border-radius: 20px;
-  padding: 10px;
-  margin-right: 20;
-
-}
-
-/* Navigation Links */
-#nav-links {
-  display: flex;
-  /* Default flex layout */
-  width: 70%;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  /* Space between links */
-}
-
-/* Navigation Links Styling */
-header nav a {
-  text-decoration: none;
-  color: #ffffff;
-  font-weight: 500;
-  font-size: 1.5rem;
-  transition: color 0.3s ease;
-}
-
-header nav a:hover {
-  color: #ff8c00;
-}
-
-/* Login and Signup Buttons */
-header .login-signup {
-  display: flex;
-  /* Flex row for buttons */
-  gap: 0.5rem;
-  /* Space between buttons */
-}
-
-header .login-signup button {
-  background-color: black;
-  color: #fff;
-  border: none;
-  border-radius: 20px;
-  padding: 0.5rem 1rem;
-  font-size: larger;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-header .login-signup button:hover {
-  background-color: gray;
-}
-
-/* Company Info */
-header .company-info {
-  z-index: 2;
-  text-align: center;
-  padding: 2rem 1rem;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-header .company-info h1 {
-  font-size: 4rem;
-  margin-bottom: 0.5rem;
-}
-
-header .company-info p {
-  font-size: 2.5rem;
-  color: #ffffff;
-}
-
-/* Main content styling */
-main {
-  padding: 40px 20px;
-  background-color: transparent;
-  position: relative;
-  z-index: 0;
-}
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-  #nav-links {
-    /* Increased z-index for visibility */
+@media only screen and (max-width: 850px) {
+  #navbar #links {
     display: none;
-    /* Hide navigation links by default */
-    flex-direction: column;
-    /* Stack links vertically */
-    align-items: center;
-    /* Align items to the start */
-    width: 40%;
-    position: absolute;
-    /* Position absolute */
-    top: 25%;
-    /* Position below the nav */
-    right: 5%;
-    background-color: rgba(255, 255, 255, 0.9);
-    /* Reduced opacity */
-    padding: 0.5rem 0;
-    /* Smaller padding for the menu */
-    border-radius: 5px;
-    z-index: 10;
   }
 
-  #browse {
-    background-color: transparent;
-    width: 100%;
-    gap: 0.5rem;
-    display: flex;
-    flex-direction: column;
-    /* Stack links vertically */
-    padding: 0.5rem 0;
-    /* Smaller padding for the menu */
-  }
-
-  .login-signup {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-  }
-
-  .login-signup {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-  }
-
-  #nav-links.show {
-    display: flex;
-    /* Show the nav links when toggled */
-  }
-
-  header nav {
-    justify-content: space-between;
-    /* Align items to the start */
-  }
-
-  header .login-signup {
-    flex-direction: column;
-    /* Stack buttons vertically */
-    width: 100%;
-    /* Ensure it takes full width */
-    margin-top: 0.5rem;
-    /* Adjust spacing for buttons */
-  }
-
-  header .login-signup button {
-    width: 50%;
-  }
-
-  .hamburger {
-    display: block;
-
-  }
-
-  header .company-info h1 {
-    font-size: 3rem;
-  }
-
-  header .company-info p {
-    font-size: 1.5rem;
-  }
-
-  header nav a {
-    margin: 0;
-    /* Remove margin for mobile */
-    font-size: 1.2rem;
-    /* Adjust font size */
-    color: #000;
-    /* Change text color to black */
+  #navbar button {
+    display: none;
   }
 }
 
-html {
-  scroll-behavior: smooth;
+
+/* content */
+
+#content {
+  width: 100%;
+  height: 100vh;
+}
+
+
+.section {
+  min-height: 100vh;
+  padding: 10vw;
+
+  justify-content: center;
+}
+
+
+
+.section#home .section_content {
+
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+
+  gap: var(--sz3);
+}
+
+.section#home .section_content * {
+  color: var(--white);
+}
+
+.section#home .section_content h1 {
+  font-size: var(--sz15);
+}
+
+.section#home .section_content h2 {
+  font-size: var(--sz9);
+
 }

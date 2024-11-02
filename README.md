@@ -208,3 +208,12 @@ Citations:
 [6] https://qcsinfo.org/imports-and-exports/
 [7] https://icc.academy/certifications/export-import-certificate/
 [8] https://iccwbo.org/online-training-and-certification/export-import-certificate-eic/
+
+
+
+# WE WON OPENCAMP 2024
+https://opencamp2024.devpost.com/
+
+With this project, we won the second edtition of the OpenCamp hackathon hosted by OpenMinds Club after being the first's edtion winners in 2023
+
+

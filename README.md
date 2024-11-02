@@ -31,6 +31,11 @@
 - transportation system
 
 
+# PRESENTATION
+https://www.figma.com/deck/LdUwAaNpOlKZh8XMJkklHA/Untitled?node-id=1-39&node-type=slide&t=Qhfx61gcettTV7Pg-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1
+
+# BMC
+
 # REQUIRED DOCS
 
 To import and export products in Algeria, follow these structured steps for each process:

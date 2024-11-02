@@ -1,3 +1,11 @@
+<img src="https://github.com/zaqks/TradeFusion/blob/8b377ec72d8aa81ee462cdf14f58d3719a933b74/docs/screens/Screen%20Shot%202024-11-02%20at%2013.50.37.png" width=100%>
+
+
+
+| ![Alt text](https://github.com/zaqks/TradeFusion/blob/8b377ec72d8aa81ee462cdf14f58d3719a933b74/docs/screens/Screen%20Shot%202024-11-02%20at%2013.51.09.png) | ![Alt text](https://github.com/zaqks/TradeFusion/blob/8b377ec72d8aa81ee462cdf14f58d3719a933b74/docs/screens/Screen%20Shot%202024-11-02%20at%2013.51.19.png) |
+|---------|---------|
+
+
 # TradeFusion
 
 # OBJECTIVES

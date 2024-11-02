@@ -6,6 +6,9 @@
 |---------|---------|
 
 
+# DEMO
+https://tradefusion.pythonanywhere.com
+
 # TradeFusion
 
 # OBJECTIVES

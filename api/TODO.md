@@ -17,5 +17,9 @@
 - [X] account validation
 
 - [X] a better stocks page
-- [ ] logos
-- [ ] fix imgs
+- [X] logos
+- [X] fix imgs
+
+
+- [ ] fix the landing page
+- [ ] fix the home page

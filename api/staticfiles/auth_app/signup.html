@@ -1,0 +1,241 @@
+{% extends 'auth_app/auth_base.html' %}
+
+
+
+{% block title%} SignUp {% endblock%}
+{% block btn%} Sign Up & Verify {% endblock%}
+
+
+
+
+{% block frm %}
+
+
+<!--
+<div class="section borders overflow" style="margin: var(--sz4);">
+    <div class="section_title">
+        <h2> Authorizations & Certifications</h2>
+        <button type="button">Add +</button>
+    </div>
+    <div class="section_content">
+        <table>
+            <thead>
+                <tr>
+                    <th>File</th>
+                    <th>Size</th>
+                    <th></th>                                
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>declaration1.pdf</td>
+                    <td>50K</td>
+                    <td>x</td>
+                </tr>
+                <tr>
+                    <td>declaration2.pdf</td>
+                    <td>50K</td>
+                    <td>x</td>
+                </tr>
+                <tr>
+                    <td>declaration3.pdf</td>
+                    <td>50K</td>
+                    <td>x</td>
+                </tr>
+            </tbody>
+        </table>
+
+
+    </div>
+</div>
+-->
+
+<div class="section input_section">
+    <div class="section_title input_tag">
+        Name
+    </div>
+    <div class="section_content">
+        <input type="text" placeholder="Name">
+    </div>
+</div>
+
+<div class="section input_section">
+    <div class="section_title input_tag">
+        Surname
+    </div>
+    <div class="section_content">
+        <input type="text" placeholder="Surname">
+    </div>
+</div>
+
+<div class="section input_section">
+    <div class="section_title input_tag">
+        Address
+    </div>
+    <div class="section_content">
+        <input type="text" placeholder="Address">
+    </div>
+</div>
+
+<div class="section input_section">
+    <div class="section_title input_tag">
+        NIN
+    </div>
+    <div class="section_content">
+        <input type="text" placeholder="NIN">
+    </div>
+</div>
+
+<div class="section input_section">
+    <div class="section_title input_tag">
+        BIC
+    </div>
+    <div class="section_content">
+        <input type="text" placeholder="BIC">
+    </div>
+</div>
+
+<div class="section input_section">
+    <div class="section_title input_tag">
+        IBAN
+    </div>
+    <div class="section_content">
+        <input type="text" placeholder="IBAN">
+    </div>
+</div>
+
+
+<div class="section input_section">
+    <div class="section_title input_tag">
+        Email
+    </div>
+    <div class="section_content">
+        <input type="email" placeholder="Email">
+    </div>
+</div>
+
+<div class="section input_section">
+    <div class="section_title input_tag">
+        Phone Number
+    </div>
+    <div class="section_content">
+        <input type="tel" placeholder="Phone Number">
+    </div>
+</div>
+
+
+<div class="section borders" style="margin-top: var(--sz4);">
+    <div class="section_title">
+        <h2>Authorizations & Certifications</h2>
+    </div>
+
+    <div class="section_content">
+        <div class="section input_section">
+            <div class="section_title input_tag">
+                Import License
+            </div>
+            <div class="section_content">
+                <input type="text" placeholder="UPLOAD CERTIFICATION PDF">
+            </div>
+        </div>
+
+        <div class="section input_section">
+            <div class="section_title input_tag">
+                Certificate of Conformity
+            </div>
+            <div class="section_content">
+                <input type="text" placeholder="UPLOAD CERTIFICATION PDF">
+            </div>
+        </div>
+
+        <div class="section input_section">
+            <div class="section_title input_tag">
+                Trade Register (Registre de commerce)
+            </div>
+            <div class="section_content">
+                <input type="text" placeholder="UPLOAD CERTIFICATION PDF">
+            </div>
+        </div>
+
+        <div class="section input_section">
+            <div class="section_title input_tag">
+                Tax Identifier (Carte fiscale)
+            </div>
+            <div class="section_content">
+                <input type="text" placeholder="UPLOAD CERTIFICATION PDF">
+            </div>
+        </div>
+
+        <div class="section input_section">
+            <div class="section_title input_tag">
+                Commercial Invoice
+            </div>
+            <div class="section_content">
+                <input type="text" placeholder="UPLOAD CERTIFICATION PDF">
+            </div>
+        </div>
+
+        <div class="section input_section">
+            <div class="section_title input_tag">
+                Mandate for the customs broker
+            </div>
+            <div class="section_content">
+                <input type="text" placeholder="UPLOAD CERTIFICATION PDF">
+            </div>
+        </div>
+
+        <div class="section input_section">
+            <div class="section_title input_tag">
+                Border Inspection Documents
+            </div>
+            <div class="section_content">
+                <input type="text" placeholder="UPLOAD CERTIFICATION PDF">
+            </div>
+        </div>
+
+        <div class="section input_section">
+            <div class="section_title input_tag">
+                Special Licenses (if applicable)
+            </div>
+            <div class="section_content">
+                <input type="text" placeholder="UPLOAD CERTIFICATION PDF">
+            </div>
+        </div>
+
+        <div class="section input_section">
+            <div class="section_title input_tag">
+                Certificate of Origin
+            </div>
+            <div class="section_content">
+                <input type="text" placeholder="UPLOAD CERTIFICATION PDF">
+            </div>
+        </div>
+
+        <div class="section input_section">
+            <div class="section_title input_tag">
+                Packing List
+            </div>
+            <div class="section_content">
+                <input type="text" placeholder="UPLOAD CERTIFICATION PDF">
+            </div>
+        </div>
+
+        <div class="section input_section">
+            <div class="section_title input_tag">
+                Detailed Note (itemized list of contents)
+            </div>
+            <div class="section_content">
+                <input type="text" placeholder="UPLOAD CERTIFICATION PDF">
+            </div>
+        </div>
+
+    </div>
+</div>
+
+{% endblock %}
+
+
+{% block redirect %}
+<a href="{% url 'auth_app:sign_in' %}">I have an account</a>
+{% endblock %}

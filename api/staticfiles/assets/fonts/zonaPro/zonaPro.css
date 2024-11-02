@@ -1,0 +1,216 @@
+@font-face {
+    font-family: 'Zona Pro';
+    src: url('files/ZonaPro-Regular.eot');
+    src: local('Zona Pro Regular'), local('ZonaPro-Regular'),
+        url('files/ZonaPro-Regular.eot?#iefix') format('embedded-opentype'),
+        url('files/ZonaPro-Regular.woff2') format('woff2'),
+        url('files/ZonaPro-Regular.woff') format('woff'),
+        url('files/ZonaPro-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Zona Pro';
+    src: url('files/ZonaPro-Bold.eot');
+    src: local('Zona Pro Bold'), local('ZonaPro-Bold'),
+        url('files/ZonaPro-Bold.eot?#iefix') format('embedded-opentype'),
+        url('files/ZonaPro-Bold.woff2') format('woff2'),
+        url('files/ZonaPro-Bold.woff') format('woff'),
+        url('files/ZonaPro-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Zona Pro';
+    src: url('files/ZonaPro-SemiBold.eot');
+    src: local('Zona Pro SemiBold'), local('ZonaPro-SemiBold'),
+        url('files/ZonaPro-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('files/ZonaPro-SemiBold.woff2') format('woff2'),
+        url('files/ZonaPro-SemiBold.woff') format('woff'),
+        url('files/ZonaPro-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Zona Pro Ultra';
+    src: url('files/ZonaPro-UltraItalic.eot');
+    src: local('Zona Pro Ultra Italic'), local('ZonaPro-UltraItalic'),
+        url('files/ZonaPro-UltraItalic.eot?#iefix') format('embedded-opentype'),
+        url('files/ZonaPro-UltraItalic.woff2') format('woff2'),
+        url('files/ZonaPro-UltraItalic.woff') format('woff'),
+        url('files/ZonaPro-UltraItalic.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Zona Pro Ultra';
+    src: url('files/ZonaPro-Ultra.eot');
+    src: local('Zona Pro Ultra'), local('ZonaPro-Ultra'),
+        url('files/ZonaPro-Ultra.eot?#iefix') format('embedded-opentype'),
+        url('files/ZonaPro-Ultra.woff2') format('woff2'),
+        url('files/ZonaPro-Ultra.woff') format('woff'),
+        url('files/ZonaPro-Ultra.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Zona Pro';
+    src: url('files/ZonaPro-Black.eot');
+    src: local('Zona Pro Black'), local('ZonaPro-Black'),
+        url('files/ZonaPro-Black.eot?#iefix') format('embedded-opentype'),
+        url('files/ZonaPro-Black.woff2') format('woff2'),
+        url('files/ZonaPro-Black.woff') format('woff'),
+        url('files/ZonaPro-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Zona Pro';
+    src: url('files/ZonaPro-Light.eot');
+    src: local('Zona Pro Light'), local('ZonaPro-Light'),
+        url('files/ZonaPro-Light.eot?#iefix') format('embedded-opentype'),
+        url('files/ZonaPro-Light.woff2') format('woff2'),
+        url('files/ZonaPro-Light.woff') format('woff'),
+        url('files/ZonaPro-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Zona Pro Regular';
+    src: url('files/ZonaPro-RegularItalic.eot');
+    src: local('Zona Pro Regular Italic'), local('ZonaPro-RegularItalic'),
+        url('files/ZonaPro-RegularItalic.eot?#iefix') format('embedded-opentype'),
+        url('files/ZonaPro-RegularItalic.woff2') format('woff2'),
+        url('files/ZonaPro-RegularItalic.woff') format('woff'),
+        url('files/ZonaPro-RegularItalic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Zona Pro Hairline';
+    src: url('files/ZonaPro-Hairline.eot');
+    src: local('Zona Pro Hairline'), local('ZonaPro-Hairline'),
+        url('files/ZonaPro-Hairline.eot?#iefix') format('embedded-opentype'),
+        url('files/ZonaPro-Hairline.woff2') format('woff2'),
+        url('files/ZonaPro-Hairline.woff') format('woff'),
+        url('files/ZonaPro-Hairline.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Zona Pro';
+    src: url('files/ZonaPro-LightItalic.eot');
+    src: local('Zona Pro Light Italic'), local('ZonaPro-LightItalic'),
+        url('files/ZonaPro-LightItalic.eot?#iefix') format('embedded-opentype'),
+        url('files/ZonaPro-LightItalic.woff2') format('woff2'),
+        url('files/ZonaPro-LightItalic.woff') format('woff'),
+        url('files/ZonaPro-LightItalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Zona Pro';
+    src: url('files/ZonaPro-BlackItalic.eot');
+    src: local('Zona Pro Black Italic'), local('ZonaPro-BlackItalic'),
+        url('files/ZonaPro-BlackItalic.eot?#iefix') format('embedded-opentype'),
+        url('files/ZonaPro-BlackItalic.woff2') format('woff2'),
+        url('files/ZonaPro-BlackItalic.woff') format('woff'),
+        url('files/ZonaPro-BlackItalic.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Zona Pro';
+    src: url('files/ZonaPro-ExtraBold.eot');
+    src: local('Zona Pro ExtraBold'), local('ZonaPro-ExtraBold'),
+        url('files/ZonaPro-ExtraBold.eot?#iefix') format('embedded-opentype'),
+        url('files/ZonaPro-ExtraBold.woff2') format('woff2'),
+        url('files/ZonaPro-ExtraBold.woff') format('woff'),
+        url('files/ZonaPro-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Zona Pro';
+    src: url('files/ZonaPro-BoldItalic.eot');
+    src: local('Zona Pro Bold Italic'), local('ZonaPro-BoldItalic'),
+        url('files/ZonaPro-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('files/ZonaPro-BoldItalic.woff2') format('woff2'),
+        url('files/ZonaPro-BoldItalic.woff') format('woff'),
+        url('files/ZonaPro-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Zona Pro';
+    src: url('files/ZonaPro-ExtraBoldItalic.eot');
+    src: local('Zona Pro ExtraBold Italic'), local('ZonaPro-ExtraBoldItalic'),
+        url('files/ZonaPro-ExtraBoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('files/ZonaPro-ExtraBoldItalic.woff2') format('woff2'),
+        url('files/ZonaPro-ExtraBoldItalic.woff') format('woff'),
+        url('files/ZonaPro-ExtraBoldItalic.ttf') format('truetype');
+    font-weight: 800;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Zona Pro';
+    src: url('files/ZonaPro-SemiBoldItalic.eot');
+    src: local('Zona Pro SemiBold Italic'), local('ZonaPro-SemiBoldItalic'),
+        url('files/ZonaPro-SemiBoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('files/ZonaPro-SemiBoldItalic.woff2') format('woff2'),
+        url('files/ZonaPro-SemiBoldItalic.woff') format('woff'),
+        url('files/ZonaPro-SemiBoldItalic.ttf') format('truetype');
+    font-weight: 600;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Zona Pro Hairline';
+    src: url('files/ZonaPro-HairlineItalic.eot');
+    src: local('Zona Pro Hairline Italic'), local('ZonaPro-HairlineItalic'),
+        url('files/ZonaPro-HairlineItalic.eot?#iefix') format('embedded-opentype'),
+        url('files/ZonaPro-HairlineItalic.woff2') format('woff2'),
+        url('files/ZonaPro-HairlineItalic.woff') format('woff'),
+        url('files/ZonaPro-HairlineItalic.ttf') format('truetype');
+    font-weight: 100;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Zona Pro';
+    src: url('files/ZonaPro-Thin.eot');
+    src: local('Zona Pro Thin'), local('ZonaPro-Thin'),
+        url('files/ZonaPro-Thin.eot?#iefix') format('embedded-opentype'),
+        url('files/ZonaPro-Thin.woff2') format('woff2'),
+        url('files/ZonaPro-Thin.woff') format('woff'),
+        url('files/ZonaPro-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Zona Pro';
+    src: url('files/ZonaPro-ThinItalic.eot');
+    src: local('Zona Pro Thin Italic'), local('ZonaPro-ThinItalic'),
+        url('files/ZonaPro-ThinItalic.eot?#iefix') format('embedded-opentype'),
+        url('files/ZonaPro-ThinItalic.woff2') format('woff2'),
+        url('files/ZonaPro-ThinItalic.woff') format('woff'),
+        url('files/ZonaPro-ThinItalic.ttf') format('truetype');
+    font-weight: 100;
+    font-style: italic;
+}
+

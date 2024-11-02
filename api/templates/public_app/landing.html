@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TradeFusion - Your Trusted Logistics Partner</title>
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'public_app/landing.css' %}">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <div id="overlay">
+
+    </div>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="{% static '/assets/images/logos/svg/logo2.svg' %}" alt="">
+
+            </div>
+
+            <button id="hamburger" class="hamburger" onclick="toggleNav()">&#9776;</button>
+            <div id="nav-links" class="hidden">
+                <div id="browse">                
+                <a href="#services">Services</a>
+                <a href="#why-us">Why Us</a>
+                <a href="#faq">FAQ</a>
+                <a href="#contact">Contact</a>
+            </div>
+                <div class="login-signup">
+                    <button onclick='document.location.href=`{% url "auth_app:sign_in" %}`'' >Sign In</button>
+                    <button onclick='document.location.href=`{% url "auth_app:sign_up" %}`'' >Sign Up</button>                    
+                </div>
+            </div>
+        </nav>
+    
+        <!-- Company info section -->
+        <div class="company-info">
+            <h1>Welcome to TradeFusion</h1>
+            <p>Your trusted partner in efficient, reliable, and timely delivery services.</p>
+        </div>
+    </header>
+    
+    
+
+    <main>
+        <section id="services" class="bento-card">
+            <div class="section_title">
+                <h2>Our Services</h2>
+            </div>
+            <div class="services-container">
+                <div class="service">
+                    <h3>Document Management</h3>
+                    <p>Streamline the submission and verification of required documents for importing and exporting
+                        products, making compliance easier.</p>
+                </div>
+                <div class="service">
+                    <h3>Automated Tax Calculation</h3>
+                    <p>Utilize our integrated tax system to automatically calculate and deduct applicable taxes during
+                        transactions, ensuring compliance and efficiency.</p>
+                </div>
+                <div class="service">
+                    <h3>Real-time Transaction Monitoring</h3>
+                    <p>Track your transactions and shipments in real-time, providing peace of mind and transparency
+                        throughout the import and export processes.</p>
+                </div>
+                <div class="service">
+                    <h3>AI-Powered Verification</h3>
+                    <p>Leverage artificial intelligence to automate the verification of documents and transactions,
+                        reducing the risk of fraud and errors.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="why-us" class="bento-card">
+            <div class="section_title">
+                <h2>Why Choose Us</h2>
+            </div>
+            <p>TradeFusion stands out in the logistics sector due to our commitment to excellence and innovation. Our
+                user-friendly platform ensures that both importers and exporters can navigate the complexities of
+                international trade with ease. Key advantages of choosing TradeFusion include:</p>
+            <ul>
+                <li>Efficient processing of documents and transactions</li>
+                <li>Strong partnerships with local authorities to ensure compliance</li>
+                <li>A robust support system to assist users throughout the trading process</li>
+                <li>Continuous updates and improvements based on user feedback</li>
+            </ul>
+        </section>
+
+        <section id="faq" class="bento-card">
+            <div class="section_title">
+                <h2>Frequently Asked Questions</h2>
+            </div>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <h3>What documents are required for importing products?</h3>
+                    <p>To import products, you need an import license, a certificate of conformity, and various other
+                        documents such as a commercial invoice, packing list, and customs declaration.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>How does the automated tax system work?</h3>
+                    <p>Our automated tax system calculates the applicable taxes based on your transaction details and
+                        deducts them automatically during the payment process.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Can I track my shipments in real-time?</h3>
+                    <p>Yes! Our platform provides real-time tracking for all shipments, allowing you to monitor their
+                        status at any time.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="bento-card">
+            <div class="section_title">
+                <h2>Contact Us</h2>
+            </div>
+            <p>If you have any questions or need support, feel free to reach out to us:</p>
+            <p>Email: support@tradefusion.com</p>
+            <p>Phone: +213 123 456 789</p>
+            <p>Address: 123 Trade Street, Algiers, Algeria</p>
+        </section>
+    </main>
+    <script>
+        function toggleNav() {
+            const navLinks = document.getElementById('nav-links');
+            navLinks.classList.toggle('show');
+        }
+        
+    </script>
+</body>
+
+</html>

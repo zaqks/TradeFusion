@@ -1,0 +1,17 @@
+button {
+  font-size: var(--sz4);
+  font-weight: 600;
+
+  padding: var(--sz3) var(--sz4);
+  border-radius: var(--sz5);
+
+  background-image: linear-gradient(
+    to bottom right,
+    var(--accent0),
+    var(--accent1)
+  );
+
+  cursor: pointer;
+
+  color: var(--white);
+}

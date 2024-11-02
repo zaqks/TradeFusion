@@ -1,0 +1,21 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'widgets/form/form.css' %}">
+
+
+<div class="section input_section" id="{{field.label}}">
+    <div class="section_title input_tag">
+        {{ field.label }}
+    </div>
+    <div class="section_content">
+        {{ field }}        
+
+        {% for error in field.errors %}
+        <div class="input_error">
+            {{ error }}
+        </div>
+        {% endfor %}
+
+    </div>
+
+
+</div>

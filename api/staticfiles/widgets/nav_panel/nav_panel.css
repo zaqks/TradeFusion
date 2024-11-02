@@ -1,0 +1,123 @@
+.nav_panel {
+  width: 100%;
+  height: 100%;
+
+  background-color: var(--bg1);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  padding: 4vw;
+
+  overflow: hidden;
+  overflow-y: scroll;
+
+  z-index: 5;
+}
+
+.nav_panel.hide {
+  display: flex;
+}
+
+.nav_panel #logo {
+  width: 100%;
+  aspect-ratio: 3;
+
+}
+
+.nav_panel a {
+  font-size: var(--sz4);
+  color: var(--accent0);
+}
+
+.nav_panel #nav_cards {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  row-gap: var(--sz7);
+}
+
+.nav_card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  font-size: var(--sz2);
+  font-weight: 600;
+
+  /*column-gap: var(--sz3);*/
+
+  padding: var(--sz3);
+  border-radius: var(--sz4);
+}
+
+.nav_card a {
+  color: var(--txt1);
+  margin: 0 auto;
+
+  text-align: center;
+
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.nav_card img {
+  width: var(--sz5);
+  aspect-ratio: 1;
+
+  object-fit: contain;
+}
+
+/**/
+
+.nav_card.selected {
+  background-color: var(--accent1);
+}
+
+.nav_card.selected img {
+  filter: brightness(3);
+}
+
+.nav_card.selected a {
+  color: var(--white);
+}
+
+.nav_panel #btns {
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+
+  flex-wrap: wrap;
+
+  column-gap: var(--sz2);
+  row-gap: var(--sz2);
+}
+
+@media only screen and (max-width: 1000px) {
+  .nav_panel {
+    padding: 10vw;
+    animation: var(--extend_anim);
+  }
+
+  .nav_panel.hide {
+    display: none;
+  }
+}
+
+@keyframes extend {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+:root {
+  --extend_anim: extend 0.1s linear 0s 1 normal;
+}

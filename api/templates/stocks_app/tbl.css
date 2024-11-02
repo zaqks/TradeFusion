@@ -1,0 +1,24 @@
+
+
+
+.status-success {
+    color: #27ae60;
+    /* Green for successful deliveries */
+    font-weight: bold;
+    /* Bold for emphasis */
+  }
+  
+  .status-pending {
+    color: #f39c12;
+    /* Orange for pending status */
+    font-weight: bold;
+    /* Bold for emphasis */
+  }
+  
+  .status-failed {
+    color: #e74c3c;
+    /* Red for failed deliveries */
+    font-weight: bold;
+    /* Bold for emphasis */
+  }
+  

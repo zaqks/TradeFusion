@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TradeFusion</title>
+
+  {% load static %}
+  {% load i18n %}
+
+  <link rel="shortcut icon" href="{% static 'assets/images/logos/logo1.png' %}" type="image/x-icon" />
+
+  <link rel="stylesheet" href="{% static 'assets/fonts/zonaPro/zonaPro.css' %}" />
+  <link rel="stylesheet" id="theme_css" href="{% static 'widgets/theme_light.css' %}" />
+  <link rel="stylesheet" href="{% static 'widgets/app_base/app_base.css' %}" />
+  <link rel="stylesheet" href="{% static 'widgets/app_base/page_base.css' %}" />
+</head>
+
+<body>
+  <div id="left">{% block nav_panel %}{% endblock %}</div>
+  <div id="right">
+    <div class="page_base">
+      <link rel="stylesheet" href="{% static 'widgets/section/section.css' %}" />
+      <link rel="stylesheet" href="{% static 'widgets/button/button.css' %}" />
+
+      <div class="section" id="page_section">
+        <div class="section_title" id="page_title">
+          <h1>{% block page_title %}{% endblock %}</h1>
+        </div>
+
+
+        <div class="section_content">
+          {% block page_body %} {% endblock %}
+        </div>
+      </div>
+    </div>
+
+    {% include 'widgets/footer/footer.html' %}
+
+  </div>
+
+  {% include 'widgets/floating_icon/floating_icon.html' %}
+
+  <!--
+  <script src="{% static 'scripts/theme.js' %}"></script>
+  <script>
+    const LIGHT = "{% static 'widgets/theme_light.css' %}";
+    const DARK = "{% static 'widgets/theme_dark.css' %}";
+    const CURRENT_THEME = localStorage.getItem('theme')
+    //  
+
+
+    toggleButton.addEventListener('dblclick', () => {
+      if (CURRENT_THEME.includes("light")) {
+        themeStyle.href = DARK;
+        localStorage.setItem('theme', DARK);
+        //
+      } else {
+        themeStyle.href = LIGHT;
+        localStorage.setItem('theme', LIGHT);
+        //
+      }
+    });
+
+
+    toggleButton.addEventListener("click")
+  </script>
+-->
+
+</body>
+
+</html>

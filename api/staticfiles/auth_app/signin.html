@@ -1,0 +1,31 @@
+{% extends 'auth_app/auth_base.html' %}
+
+
+
+{% block title%} SignIn {% endblock%} 
+{% block btn%} Sign In {% endblock%} 
+
+
+{% block frm %}
+<div class="section input_section" id="{{field.label}}">
+    <div class="section_title input_tag">
+        Email
+    </div>
+    <div class="section_content">
+        <input type="email" name="" id="" placeholder="Email">
+    </div>
+</div>
+
+<div class="section input_section" id="{{field.label}}">
+    <div class="section_title input_tag">
+        Password
+    </div>
+    <div class="section_content">
+        <input type="password" name="" id="" placeholder="Password">
+    </div>
+</div>
+{% endblock %}
+
+{% block redirect %}
+<a href="{% url 'auth_app:sign_up' %}">I don't have an account</a>
+{% endblock %}

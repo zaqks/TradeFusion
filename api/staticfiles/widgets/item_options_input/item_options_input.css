@@ -1,0 +1,29 @@
+.categ_section {
+  margin-top: var(--sz3);  
+}
+
+.categ_section .section_title {
+  column-gap: var(--sz1);
+}
+
+.categ_section .section_title input[type="number"] {
+  width: 30%;
+}
+
+.categ_section .section_title button {
+  height: 100%;
+  aspect-ratio: 1;
+}
+
+
+.categ_section .section_title{
+  margin: 0;
+}
+
+.option_section {
+  margin-top: var(--sz2);
+}
+
+.categ_title {
+  margin-bottom: var(--sz3);
+}

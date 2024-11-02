@@ -1,0 +1,37 @@
+{% extends 'widgets/nav_panel/nav_panel.html' %}
+
+{% block cards %}
+
+{% load static %}
+
+
+<div class="nav_card">
+  <img src="{% static 'assets/icons/home.png' %}" />
+  <!--alt="home"-->
+  <a href="{% url 'stocks_app:stocks' %}">Home</a>
+</div>
+<div class="nav_card">
+  <img src="{% static 'assets/icons/shopping-cart.png'%}" />
+  <!--alt="calendar--v1"-->
+  <a href="{% url 'stocks_app:imports' %}">Imports</a>
+</div>
+<div class="nav_card">
+  <img src="{% static 'assets/icons/purchase-order.png'%}" />
+  <!--alt="person-male--v3"-->
+  <a href="{% url 'stocks_app:exports' %}">Exports</a>
+</div>
+
+<!--
+<div class="nav_card">
+  <img
+    src="https://img.icons8.com/ios-filled/48/767676/settings.png"
+    alt="settings"
+  />
+  <a href="">Settings</a>
+</div>
+-->
+<script>
+  new NavPanel(["/", "/imports", "/exports"]).set_select()
+</script>
+
+{% endblock %}

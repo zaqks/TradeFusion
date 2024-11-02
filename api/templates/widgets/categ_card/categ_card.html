@@ -1,0 +1,15 @@
+<div class="categ_card">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'widgets/categ_card/categ_card.css' %}">
+    <div class="img">
+        {% if categ.img %}
+        <img src="{{categ.img}}" alt="">
+        {% endif %}
+    </div>
+
+    <h2>{{categ}}</h2>
+
+
+    <a href="{% url 'client_app:categ' pk=categ.pk %}"></a>
+
+</div>

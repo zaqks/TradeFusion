@@ -1,0 +1,42 @@
+.categ_card {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  row-gap: var(--sz2);
+
+  margin: var(--sz1);
+  
+}
+
+.categ_card .img {
+  width: calc(var(--sz10) * 2);
+  border-radius: var(--sz10);
+
+  aspect-ratio: 1;
+  background-color: var(--bg1);
+  
+
+  overflow: hidden;
+
+  box-shadow: var(--shd1);
+}
+
+.categ_card .img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  aspect-ratio: 1;
+}
+
+.categ_card a {
+  width: 100%;
+  height: 100%;
+
+  position: absolute;
+}

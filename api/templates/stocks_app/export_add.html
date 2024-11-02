@@ -1,0 +1,186 @@
+{% extends 'widgets/app_base/app_base_client.html' %}
+
+{% block page_title %}
+{% endblock %}
+
+
+{% block page_body %}
+
+{% load static %}
+<link rel="stylesheet" href="{% static 'widgets/section/section.css' %}">
+<link rel="stylesheet" href="{% static 'widgets/form/form.css' %}">
+<link rel="stylesheet" href="{% static 'widgets/table/table.css' %}">
+
+<div class="section">
+    <div class="section_title">
+        <h1>Export A Stock</h1>
+    </div>
+
+
+    <div class="section_content">
+        <form>
+
+            <div class="section input_section">
+                <div class="section_title input_tag">
+                    Name
+                </div>
+                <div class="section_content">
+                    <input type="text" placeholder="Name">
+                </div>
+            </div>
+
+            <div class="section input_section">
+                <div class="section_title input_tag">
+                    Category
+                </div>
+                <div class="section_content">
+                    <input type="text" placeholder="Category">
+                </div>
+            </div>
+
+            <div class="section input_section">
+                <div class="section_title input_tag">
+                    Quantity
+                </div>
+                <div class="section_content">
+                    <input type="text" placeholder="Quantity">
+                </div>
+            </div>
+
+            <div class="section input_section">
+                <div class="section_title input_tag">
+                    Unit
+                </div>
+                <div class="section_content">
+                    <input type="text" placeholder="Unit">
+                </div>
+            </div>
+
+            <div class="section input_section">
+                <div class="section_title input_tag">
+                    Country of Origin
+                </div>
+                <div class="section_content">
+                    <input type="text" placeholder="Country of Origin">
+                </div>
+            </div>
+
+            <div class="section input_section">
+                <div class="section_title input_tag">
+                    Exported To
+                </div>
+                <div class="section_content">
+                    <input type="text" placeholder="Exported To">
+                </div>
+            </div>
+
+            <div class="section input_section">
+                <div class="section_title input_tag">
+                    Unit Price
+                </div>
+                <div class="section_content">
+                    <input type="text" placeholder="Unit Price">
+                </div>
+            </div>
+
+            <div class="section input_section">
+                <div class="section_title input_tag">
+                    Total Value
+                </div>
+                <div class="section_content">
+                    <input type="text" placeholder="Total Value">
+                </div>
+            </div>
+
+            <div class="section input_section">
+                <div class="section_title input_tag">
+                    Description
+                </div>
+                <div class="section_content">
+                    <input type="text" placeholder="Description">
+                </div>
+            </div>
+
+            <div class="section borders">
+                <div class="section_title">
+                    <h2>Stock Image</h2>
+                    <button>Add +</button>
+                </div>
+                <div class="section_content">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>File</th>
+                                <th>Size</th>
+                                <th></th>                                
+                            </tr>
+                        </thead>
+    
+                        <tbody>
+                            <tr>
+                                <td>image.png</td>
+                                <td>50K</td>
+                                <td>x</td>
+                            </tr>                            
+                        </tbody>
+                    </table>
+
+
+                </div>
+            </div>
+
+            <div class="section borders overflow" style="margin: var(--sz4);">
+                <div class="section_title">
+                    <h2> Authorizations & Certifications</h2>
+                    <button type="button">Add +</button>
+                </div>
+                <div class="section_content">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>File</th>
+                                <th>Size</th>
+                                <th></th>                                
+                            </tr>
+                        </thead>
+    
+                        <tbody>
+                            <tr>
+                                <td>declaration1.pdf</td>
+                                <td>50K</td>
+                                <td>x</td>
+                            </tr>
+                            <tr>
+                                <td>declaration2.pdf</td>
+                                <td>50K</td>
+                                <td>x</td>
+                            </tr>
+                            <tr>
+                                <td>declaration3.pdf</td>
+                                <td>50K</td>
+                                <td>x</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+
+                </div>
+            </div>
+
+
+        </form>
+    </div>
+
+
+
+
+
+    <button onclick="document.location.href=`{% url 'stocks_app:exports' %}`">Export</button>
+
+
+</div>
+
+
+
+
+{% endblock %}

@@ -1,0 +1,53 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'widgets/footer/footer.css' %}">
+
+
+<div class='footer'>
+
+    <div id="row">
+        <div id="logo">
+            {% include 'widgets/logo/logo2_0.html' %}
+        </div>
+
+
+        <div class="section">
+            <div class="section_content grid2">
+
+                <!--
+                <div class="section">
+                    <div class="section_title">
+                        <h3>Developer info</h3>
+                    </div>
+                    <div class="section_content">
+                        <p>+213 XXX XX XX XX</p>
+                        <p>XXXXXXX@gmail.com</p>
+                    </div>
+                </div>
+            -->
+
+                <div class="section">
+                    <div class="section_title">
+                        <h3>Contact Us</h3>
+                    </div>
+                    <div class="section_content">
+                        <p>+213 XXX XX XX XX</p>
+                        <p>+213 XXX XX XX XX</p>
+                        <p>instagram.com/XXXXX</p>
+                        <p>XXXXXXX@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <a id="me" href="https://github.com/zaqks">Designed and Developped By zaqks</a>
+
+    <div id="langs">
+        <a style="cursor: pointer;" id="EN">en</a>
+        <a style="cursor: pointer;" id="FR">fr</a>
+    </div>
+
+    <script src="{% static 'scripts/langs.js' %}"></script>
+
+</div>

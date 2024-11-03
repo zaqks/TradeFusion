@@ -9,6 +9,8 @@
   border: none;
 
   color: var(--txt0);
+
+  scroll-behavior: smooth;
 }
 
 /* Hide scrollbars for WebKit-based browsers (Chrome, Safari, Edge) */

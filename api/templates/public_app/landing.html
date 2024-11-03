@@ -23,32 +23,91 @@
 
 <body>
     <img id="bg" src="{% static '/assets/images/bgs/header.png' %}" alt="">
-    
-    <div id="navbar">        
-        <img  src="{% static '/assets/images/logos/svg/logo2.svg' %}" id="logo"></img>
-        
+
+    <div id="navbar">
+        <img src="{% static '/assets/images/logos/svg/logo2.svg' %}" id="logo"></img>
+
         <div id="links">
-            <a href="">Services</a>
-            <a href="">Why Us</a>
-            <a href="">FAQ</a>
-            <a href="">Contact</a>
+            <a href="#services">Services</a>
+            <a href="#why">Why Us</a>
+            <a href="#faq">FAQ</a>
+            <a href="#contact">Contact</a>
         </div>
-        
+
         <button>Sign In</button>
         <button>Sign Up</button>
     </div>
-    
+
     <div id="content">
 
-        <div class="section" id="home">
+        <div class="section main" id="home">
             <div class="section_content">
                 <h1>Welcome to TradeFusion</h1>
                 <h2>our trusted partner in efficient, reliable, and timely delivery services</h2>
             </div>
         </div>
-        
 
-        
+        <div class="section main" id="services">
+            <div class="section_title">
+                <h1>Our Services</h1>
+            </div>
+            <div class="section_content grid3">
+                <div class="section card">
+                    <div class="section_title">
+                        <h2>TITLE</h2>
+                    </div>
+                    <div class="section_content">
+                        <p>CONTENT</p>
+                    </div>
+                </div>
+                <div class="section card">
+                    <div class="section_title">
+                        <h2>TITLE</h2>
+                    </div>
+                    <div class="section_content">
+                        <p>CONTENT</p>
+                    </div>
+                </div>
+                <div class="section card">
+                    <div class="section_title">
+                        <h2>TITLE</h2>
+                    </div>
+                    <div class="section_content">
+                        <p>CONTENT</p>
+                    </div>
+                </div>
+                <div class="section card">
+                    <div class="section_title">
+                        <h2>TITLE</h2>
+                    </div>
+                    <div class="section_content">
+                        <p>CONTENT</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section main" id="why">
+            <div class="section_title main">
+                <h1>Why Us?</h1>
+            </div>
+            <div class="section_content"></div>
+        </div>
+
+
+        <div class="section main" id="faq">
+            <div class="section_title main">
+                <h1>Frequently Asker Questions</h1>
+            </div>
+            <div class="section_content"></div>
+        </div>
+
+        <div class="section main" id="contact">
+            <div class="section_title main">
+                <h1>Contact Us</h1>
+            </div>
+            <div class="section_content"></div>
+        </div>
 
     </div>
 </body>

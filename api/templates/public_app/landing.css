@@ -19,12 +19,10 @@ img#bg {
 
 
 @keyframes blr {
-  50% {
-    filter: brightness(0.9) blur(1px);
-  }
+
 
   100% {
-    filter: brightness(0.7) blur(2px);
+    filter: brightness(0.5) blur(3px);
   }
 }
 
@@ -92,18 +90,39 @@ img#bg {
 }
 
 
-.section {
+.section.main {
   min-height: 100vh;
   padding: 10vw;
 
   justify-content: center;
 }
 
+.section.main * {
+  color: var(--white);
+}
 
+.section.main .section_title {
+  margin-top: 5vw;
+  margin-bottom: 1vw;
+}
 
-.section#home .section_content {
-
+.section.main .section_content {
+  min-height: 75vh;
   justify-content: center;
+}
+
+/*card*/
+.section.card {
+  background-color: var(--white);
+}
+
+.section.card * {
+  color: var(--black);
+}
+
+
+/* home */
+.section#home .section_content {
   align-items: center;
 
   text-align: center;
@@ -111,9 +130,6 @@ img#bg {
   gap: var(--sz3);
 }
 
-.section#home .section_content * {
-  color: var(--white);
-}
 
 .section#home .section_content h1 {
   font-size: var(--sz15);
@@ -123,3 +139,9 @@ img#bg {
   font-size: var(--sz9);
 
 }
+
+
+/* services */
+/* why us */
+/* faq */
+/* contact */
